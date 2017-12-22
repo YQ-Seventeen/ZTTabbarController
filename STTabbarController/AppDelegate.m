@@ -24,15 +24,12 @@
     UIWindow * mainWindow = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height)];
     self.window = mainWindow;
     
-    
-    
     STTabbarItemAttribute * attribute = [STTabbarItemAttribute defaultAttribute];
     STTabbarController * tabbarController  = [STTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;
     tabbarController.rectEdge = UIRectEdgeNone;
     self.window.rootViewController = tabbarController;
-//    tabbarController.hid
     [self.window makeKeyAndVisible];
     return YES;
 }

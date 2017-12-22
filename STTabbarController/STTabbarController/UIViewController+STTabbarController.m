@@ -8,13 +8,11 @@
 #import "UIViewController+STTabbarController.h"
 #import <objc/runtime.h>
 @implementation UIViewController (STTabbarController)
-
 + (void)load {
-    Method viewWillAppear = class_getInstanceMethod([self class], @selector(viewWillAppear:));
+    Method viewWillAppear    = class_getInstanceMethod([self class], @selector(viewWillAppear:));
     Method st_viewWillAppear = class_getInstanceMethod([self class], @selector(st_viewWillAppear:));
     method_exchangeImplementations(viewWillAppear, st_viewWillAppear);
 }
-
 - (void)st_viewWillAppear:(BOOL)animated {
     [self st_viewWillAppear:animated];
     if (!self.navigationController) {
@@ -27,7 +25,6 @@
         [self.st_tabbar setTabbarHidden:YES];
     }
 }
-
 - (void)setSt_tabbar:(STTabbarController *)st_tabbar {
     if (st_tabbar) {
         SEL storeKey = @selector(st_tabbar);

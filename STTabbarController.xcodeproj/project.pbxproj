@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A804B3291FECF758005368E9 /* STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B31C1FECF758005368E9 /* STTabbar.m */; };
+		A804B32A1FECF758005368E9 /* STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B31E1FECF758005368E9 /* STTabbarController.m */; };
+		A804B32B1FECF758005368E9 /* STTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3201FECF758005368E9 /* STTabbarItem.m */; };
+		A804B32C1FECF758005368E9 /* STTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */; };
+		A804B32D1FECF758005368E9 /* STTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3241FECF758005368E9 /* STTabbarItemModel.m */; };
+		A804B32E1FECF758005368E9 /* UIView+STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3261FECF758005368E9 /* UIView+STTabbar.m */; };
+		A804B32F1FECF758005368E9 /* UIViewController+STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */; };
 		A83F7C481FEA684C00EB5623 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C471FEA684C00EB5623 /* AppDelegate.m */; };
 		A83F7C4B1FEA684C00EB5623 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C4A1FEA684C00EB5623 /* ViewController.m */; };
 		A83F7C501FEA684C00EB5623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A83F7C4F1FEA684C00EB5623 /* Assets.xcassets */; };
 		A83F7C531FEA684C00EB5623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83F7C511FEA684C00EB5623 /* LaunchScreen.storyboard */; };
 		A83F7C561FEA684C00EB5623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C551FEA684C00EB5623 /* main.m */; };
-		A83F7C5E1FEA68B300EB5623 /* STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C5D1FEA68B300EB5623 /* STTabbarController.m */; };
-		A83F7C611FEA68E100EB5623 /* STTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C601FEA68E100EB5623 /* STTabbarItemModel.m */; };
-		A83F7C641FEA693800EB5623 /* STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C631FEA693800EB5623 /* STTabbar.m */; };
-		A83F7C671FEA694500EB5623 /* STTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C661FEA694500EB5623 /* STTabbarItem.m */; };
-		A83F7C6A1FEB4AE000EB5623 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C681FEB4AE000EB5623 /* UIView+Util.m */; };
-		A83F7C6D1FEB55DC00EB5623 /* STTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C6C1FEB55DC00EB5623 /* STTabbarItemAttribute.m */; };
-		A83F7C701FEB89F500EB5623 /* UIViewController+STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C6F1FEB89F500EB5623 /* UIViewController+STTabbarController.m */; };
 		A83F7C731FEB913900EB5623 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C721FEB913800EB5623 /* ViewController1.m */; };
 		A83F7C761FEB915600EB5623 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C751FEB915600EB5623 /* ViewController2.m */; };
 		A83F7C791FEB916C00EB5623 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C781FEB916C00EB5623 /* ViewController3.m */; };
@@ -26,6 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A804B31B1FECF758005368E9 /* STTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbar.h; sourceTree = "<group>"; };
+		A804B31C1FECF758005368E9 /* STTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbar.m; sourceTree = "<group>"; };
+		A804B31D1FECF758005368E9 /* STTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarController.h; sourceTree = "<group>"; };
+		A804B31E1FECF758005368E9 /* STTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarController.m; sourceTree = "<group>"; };
+		A804B31F1FECF758005368E9 /* STTabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItem.h; sourceTree = "<group>"; };
+		A804B3201FECF758005368E9 /* STTabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItem.m; sourceTree = "<group>"; };
+		A804B3211FECF758005368E9 /* STTabbarItemAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItemAttribute.h; sourceTree = "<group>"; };
+		A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemAttribute.m; sourceTree = "<group>"; };
+		A804B3231FECF758005368E9 /* STTabbarItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItemModel.h; sourceTree = "<group>"; };
+		A804B3241FECF758005368E9 /* STTabbarItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemModel.m; sourceTree = "<group>"; };
+		A804B3251FECF758005368E9 /* UIView+STTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STTabbar.h"; sourceTree = "<group>"; };
+		A804B3261FECF758005368E9 /* UIView+STTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STTabbar.m"; sourceTree = "<group>"; };
+		A804B3271FECF758005368E9 /* UIViewController+STTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STTabbarController.h"; sourceTree = "<group>"; };
+		A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STTabbarController.m"; sourceTree = "<group>"; };
 		A83F7C431FEA684B00EB5623 /* STTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A83F7C461FEA684C00EB5623 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A83F7C471FEA684C00EB5623 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,20 +49,6 @@
 		A83F7C521FEA684C00EB5623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A83F7C541FEA684C00EB5623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A83F7C551FEA684C00EB5623 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A83F7C5C1FEA68B300EB5623 /* STTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbarController.h; sourceTree = "<group>"; };
-		A83F7C5D1FEA68B300EB5623 /* STTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbarController.m; sourceTree = "<group>"; };
-		A83F7C5F1FEA68E100EB5623 /* STTabbarItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbarItemModel.h; sourceTree = "<group>"; };
-		A83F7C601FEA68E100EB5623 /* STTabbarItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemModel.m; sourceTree = "<group>"; };
-		A83F7C621FEA693800EB5623 /* STTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbar.h; sourceTree = "<group>"; };
-		A83F7C631FEA693800EB5623 /* STTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbar.m; sourceTree = "<group>"; };
-		A83F7C651FEA694500EB5623 /* STTabbarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbarItem.h; sourceTree = "<group>"; };
-		A83F7C661FEA694500EB5623 /* STTabbarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbarItem.m; sourceTree = "<group>"; };
-		A83F7C681FEB4AE000EB5623 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
-		A83F7C691FEB4AE000EB5623 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
-		A83F7C6B1FEB55DC00EB5623 /* STTabbarItemAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbarItemAttribute.h; sourceTree = "<group>"; };
-		A83F7C6C1FEB55DC00EB5623 /* STTabbarItemAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemAttribute.m; sourceTree = "<group>"; };
-		A83F7C6E1FEB89F500EB5623 /* UIViewController+STTabbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STTabbarController.h"; sourceTree = "<group>"; };
-		A83F7C6F1FEB89F500EB5623 /* UIViewController+STTabbarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STTabbarController.m"; sourceTree = "<group>"; };
 		A83F7C711FEB913800EB5623 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		A83F7C721FEB913800EB5623 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		A83F7C741FEB915600EB5623 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
@@ -70,6 +70,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A804B31A1FECF758005368E9 /* STTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				A804B3271FECF758005368E9 /* UIViewController+STTabbarController.h */,
+				A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */,
+				A804B3211FECF758005368E9 /* STTabbarItemAttribute.h */,
+				A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */,
+				A804B31D1FECF758005368E9 /* STTabbarController.h */,
+				A804B31E1FECF758005368E9 /* STTabbarController.m */,
+				A804B3231FECF758005368E9 /* STTabbarItemModel.h */,
+				A804B3241FECF758005368E9 /* STTabbarItemModel.m */,
+				A804B31F1FECF758005368E9 /* STTabbarItem.h */,
+				A804B3201FECF758005368E9 /* STTabbarItem.m */,
+				A804B3251FECF758005368E9 /* UIView+STTabbar.h */,
+				A804B3261FECF758005368E9 /* UIView+STTabbar.m */,
+				A804B31B1FECF758005368E9 /* STTabbar.h */,
+				A804B31C1FECF758005368E9 /* STTabbar.m */,
+			);
+			path = STTabbarController;
+			sourceTree = "<group>";
+		};
 		A83F7C3A1FEA684B00EB5623 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +110,7 @@
 		A83F7C451FEA684B00EB5623 /* STTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				A83F7C691FEB4AE000EB5623 /* UIView+Util.h */,
-				A83F7C681FEB4AE000EB5623 /* UIView+Util.m */,
+				A804B31A1FECF758005368E9 /* STTabbarController */,
 				A83F7C461FEA684C00EB5623 /* AppDelegate.h */,
 				A83F7C471FEA684C00EB5623 /* AppDelegate.m */,
 				A83F7C491FEA684C00EB5623 /* ViewController.h */,
@@ -103,18 +123,6 @@
 				A83F7C781FEB916C00EB5623 /* ViewController3.m */,
 				A83F7C7A1FEB917E00EB5623 /* ViewController4.h */,
 				A83F7C7B1FEB917E00EB5623 /* ViewController4.m */,
-				A83F7C5C1FEA68B300EB5623 /* STTabbarController.h */,
-				A83F7C5D1FEA68B300EB5623 /* STTabbarController.m */,
-				A83F7C5F1FEA68E100EB5623 /* STTabbarItemModel.h */,
-				A83F7C601FEA68E100EB5623 /* STTabbarItemModel.m */,
-				A83F7C621FEA693800EB5623 /* STTabbar.h */,
-				A83F7C631FEA693800EB5623 /* STTabbar.m */,
-				A83F7C651FEA694500EB5623 /* STTabbarItem.h */,
-				A83F7C661FEA694500EB5623 /* STTabbarItem.m */,
-				A83F7C6B1FEB55DC00EB5623 /* STTabbarItemAttribute.h */,
-				A83F7C6C1FEB55DC00EB5623 /* STTabbarItemAttribute.m */,
-				A83F7C6E1FEB89F500EB5623 /* UIViewController+STTabbarController.h */,
-				A83F7C6F1FEB89F500EB5623 /* UIViewController+STTabbarController.m */,
 				A83F7C4F1FEA684C00EB5623 /* Assets.xcassets */,
 				A83F7C511FEA684C00EB5623 /* LaunchScreen.storyboard */,
 				A83F7C541FEA684C00EB5623 /* Info.plist */,
@@ -193,18 +201,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A83F7C641FEA693800EB5623 /* STTabbar.m in Sources */,
-				A83F7C6D1FEB55DC00EB5623 /* STTabbarItemAttribute.m in Sources */,
+				A804B32C1FECF758005368E9 /* STTabbarItemAttribute.m in Sources */,
+				A804B32F1FECF758005368E9 /* UIViewController+STTabbarController.m in Sources */,
+				A804B32E1FECF758005368E9 /* UIView+STTabbar.m in Sources */,
+				A804B3291FECF758005368E9 /* STTabbar.m in Sources */,
 				A83F7C4B1FEA684C00EB5623 /* ViewController.m in Sources */,
-				A83F7C701FEB89F500EB5623 /* UIViewController+STTabbarController.m in Sources */,
-				A83F7C6A1FEB4AE000EB5623 /* UIView+Util.m in Sources */,
 				A83F7C7C1FEB917E00EB5623 /* ViewController4.m in Sources */,
 				A83F7C761FEB915600EB5623 /* ViewController2.m in Sources */,
 				A83F7C561FEA684C00EB5623 /* main.m in Sources */,
-				A83F7C5E1FEA68B300EB5623 /* STTabbarController.m in Sources */,
+				A804B32A1FECF758005368E9 /* STTabbarController.m in Sources */,
 				A83F7C731FEB913900EB5623 /* ViewController1.m in Sources */,
-				A83F7C671FEA694500EB5623 /* STTabbarItem.m in Sources */,
-				A83F7C611FEA68E100EB5623 /* STTabbarItemModel.m in Sources */,
+				A804B32B1FECF758005368E9 /* STTabbarItem.m in Sources */,
+				A804B32D1FECF758005368E9 /* STTabbarItemModel.m in Sources */,
 				A83F7C481FEA684C00EB5623 /* AppDelegate.m in Sources */,
 				A83F7C791FEB916C00EB5623 /* ViewController3.m in Sources */,
 			);

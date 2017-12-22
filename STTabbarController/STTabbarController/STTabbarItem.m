@@ -14,21 +14,16 @@
 #define WIDTH_WITHOUTTITLE_MAX 41
 #define HEIGHT_WIDTHOUTTITLE_MAX 41
 #define SYSTEM_IMAGE_SIZE CGSizeMake(30, 30)
-
-
-static float  imageTitleVSpace = 5.0f;
-
-
-CGSize st_calcuteTitleAdjustSize(STTabbarItemModel *model,UIFont * titleFont,UIView * v) {
-    NSDictionary * dic = @{NSFontAttributeName:titleFont};
+static float imageTitleVSpace = 5.0f;
+CGSize st_calcuteTitleAdjustSize(STTabbarItemModel *model, UIFont *titleFont, UIView *v) {
+    NSDictionary *dic  = @{NSFontAttributeName : titleFont};
     float adjustMargin = 5.0f;
     float maxWidth     = v.st_w - adjustMargin;
-    CGRect fillRect = [model.title boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:NULL];
+    CGRect fillRect    = [model.title boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:NULL];
     fillRect.size.width = MIN(fillRect.size.width, maxWidth);
     return fillRect.size;
 }
-
- CGSize st_calculateImageAdjustSize(UIImage *st_image, STTabbarItemModel *model) {
+CGSize st_calculateImageAdjustSize(UIImage *st_image, STTabbarItemModel *model) {
     CGSize imageSize = st_image.size;
     float maxWidth, maxHeight;
     if (model.title && model.title.length > 0) {
@@ -43,34 +38,25 @@ CGSize st_calcuteTitleAdjustSize(STTabbarItemModel *model,UIFont * titleFont,UIV
     }
     return imageSize;
 }
-
-
-CGRect st_calculateImageAdjustPosition(UIImage *st_image, STTabbarItemModel *model,UIView * v ,STTabbarItemAttribute * attribute) {
+CGRect st_calculateImageAdjustPosition(UIImage *st_image, STTabbarItemModel *model, UIView *v, STTabbarItemAttribute *attribute) {
     CGSize imageAdjustSize = st_calculateImageAdjustSize(st_image, model);
     CGSize titleAdjustSize = st_calcuteTitleAdjustSize(model, attribute.titleFont, v);
-    float x,y = 0;
+    float x, y = 0;
     if (model.title && model.title.length > 0) {
-        y = (v.st_h - imageAdjustSize.height - titleAdjustSize.height - imageTitleVSpace)/2;
+        y = (v.st_h - imageAdjustSize.height - titleAdjustSize.height - imageTitleVSpace) / 2;
+    } else {
+        y = (v.st_h - imageAdjustSize.height) / 2;
     }
-    else{
-        y = (v.st_h - imageAdjustSize.height)/2;
-    }
-    x =  (v.st_w - imageAdjustSize.width)/2;
-    
-    return (CGRect){CGPointMake(x, y),imageAdjustSize};
+    x = (v.st_w - imageAdjustSize.width) / 2;
+    return (CGRect){CGPointMake(x, y), imageAdjustSize};
 }
-
-
-
-CGRect st_calcuteTitleAdjustPosition(STTabbarItemModel *model,UIView * v,STTabbarItemAttribute * attribute) {
-    CGSize titleAdjustSize =  st_calcuteTitleAdjustSize(model, attribute.titleFont, v);
-    float x,y = 0;
-    x = (v.st_w - titleAdjustSize.width)/2;
-    y = (v.st_h - titleAdjustSize.height -2);
-    
-    return (CGRect){CGPointMake(x, y),titleAdjustSize};
+CGRect st_calcuteTitleAdjustPosition(STTabbarItemModel *model, UIView *v, STTabbarItemAttribute *attribute) {
+    CGSize titleAdjustSize = st_calcuteTitleAdjustSize(model, attribute.titleFont, v);
+    float x, y = 0;
+    x = (v.st_w - titleAdjustSize.width) / 2;
+    y = (v.st_h - titleAdjustSize.height - 2);
+    return (CGRect){CGPointMake(x, y), titleAdjustSize};
 }
-
 @implementation STTabbarItem {
     UIImageView *_itemImageView;
     UILabel *_itemTitleLabel;
@@ -142,6 +128,6 @@ CGRect st_calcuteTitleAdjustPosition(STTabbarItemModel *model,UIView * v,STTabba
     }
     self->_itemTitleLabel.textColor = [self.attribute valueForKey:titleColorKey];
     self->_itemImageView.image      = [UIImage imageNamed:[self.dataModel valueForKey:imageKey]];
-    _select                         = select;
+    _select = select;
 }
 @end

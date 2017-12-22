@@ -5,14 +5,12 @@
 //  Created by yq on 2017/12/20.
 //  Copyright © 2017年 Suning. All rights reserved.
 //
-
 #import "STTabbar.h"
 #import "STTabbarItem.h"
 #import "UIView+Util.h"
 @implementation STTabbar {
-    NSArray <STTabbarItem *> * _tabbarItem;
+    NSArray<STTabbarItem *> *_tabbarItem;
 }
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -20,44 +18,38 @@
     }
     return self;
 }
-
 - (void)setItems:(NSArray<STTabbarItemModel *> *)items {
-    if(_items != items){
+    if (_items != items) {
         _items = items;
         [self setupTabbar];
     }
 }
-
-
 - (void)setupTabbar {
-    CGFloat w = self.st_w/_items.count;
-    CGFloat h = self.st_h;
-    NSMutableArray * temp = [NSMutableArray new];
-    for (NSInteger i =0,max=self.items.count; i<max; ++i) {
-        STTabbarItem * tabbarItem = [[STTabbarItem alloc]init];
-        CGFloat x = i*w;
-        CGFloat y = 0;
-        tabbarItem.frame = (CGRect){x,y,w,h};
-        tabbarItem.attribute = self.itemAttributes[i];
-        tabbarItem.dataModel = self.items[i];
-        tabbarItem.tag = i;
+    CGFloat w            = self.st_w / _items.count;
+    CGFloat h            = self.st_h;
+    NSMutableArray *temp = [NSMutableArray new];
+    for (NSInteger i = 0, max = self.items.count; i < max; ++i) {
+        STTabbarItem *tabbarItem = [[STTabbarItem alloc] init];
+        CGFloat x                = i * w;
+        CGFloat y                = 0;
+        tabbarItem.frame         = (CGRect){x, y, w, h};
+        tabbarItem.attribute     = self.itemAttributes[i];
+        tabbarItem.dataModel     = self.items[i];
+        tabbarItem.tag           = i;
         [self insertSubview:tabbarItem atIndex:0];
         [temp addObject:tabbarItem];
     }
     _tabbarItem = temp;
 }
-
 - (void)setSelectIndex:(NSInteger)selectIndex {
-    NSArray * items = self->_tabbarItem;
-    for (STTabbarItem * item in items) {
+    NSArray *items = self->_tabbarItem;
+    for (STTabbarItem *item in items) {
         NSInteger index = [items indexOfObject:item];
         if (index == selectIndex) {
             item.select = YES;
-        }
-        else{
+        } else {
             item.select = NO;
         }
     }
 }
-
 @end
