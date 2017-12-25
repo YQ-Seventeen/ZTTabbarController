@@ -7,7 +7,7 @@
 //
 #import "STTabbarController.h"
 #import "STTabbar.h"
-#import "UIView+Util.h"
+#import "UIView+STTabbar.h"
 #import "UIViewController+STTabbarController.h"
 #define MAX_ITEM_COUNT 5
 #define TABBAR_SYSTEM_HEIGHT 49.0f
