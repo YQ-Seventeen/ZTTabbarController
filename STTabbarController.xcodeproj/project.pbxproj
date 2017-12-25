@@ -7,56 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A804B3291FECF758005368E9 /* STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B31C1FECF758005368E9 /* STTabbar.m */; };
-		A804B32A1FECF758005368E9 /* STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B31E1FECF758005368E9 /* STTabbarController.m */; };
-		A804B32B1FECF758005368E9 /* STTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3201FECF758005368E9 /* STTabbarItem.m */; };
-		A804B32C1FECF758005368E9 /* STTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */; };
-		A804B32D1FECF758005368E9 /* STTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3241FECF758005368E9 /* STTabbarItemModel.m */; };
-		A804B32E1FECF758005368E9 /* UIView+STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3261FECF758005368E9 /* UIView+STTabbar.m */; };
-		A804B32F1FECF758005368E9 /* UIViewController+STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */; };
-		A83F7C481FEA684C00EB5623 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C471FEA684C00EB5623 /* AppDelegate.m */; };
-		A83F7C4B1FEA684C00EB5623 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C4A1FEA684C00EB5623 /* ViewController.m */; };
-		A83F7C501FEA684C00EB5623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A83F7C4F1FEA684C00EB5623 /* Assets.xcassets */; };
-		A83F7C531FEA684C00EB5623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83F7C511FEA684C00EB5623 /* LaunchScreen.storyboard */; };
-		A83F7C561FEA684C00EB5623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C551FEA684C00EB5623 /* main.m */; };
-		A83F7C731FEB913900EB5623 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C721FEB913800EB5623 /* ViewController1.m */; };
-		A83F7C761FEB915600EB5623 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C751FEB915600EB5623 /* ViewController2.m */; };
-		A83F7C791FEB916C00EB5623 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C781FEB916C00EB5623 /* ViewController3.m */; };
-		A83F7C7C1FEB917E00EB5623 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = A83F7C7B1FEB917E00EB5623 /* ViewController4.m */; };
+		0B01EBEFCDD1FA4469DF909B /* libPods-STTabbarController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344D14128BF17201C5AF512E /* libPods-STTabbarController.a */; };
+		A804B3611FED0352005368E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3331FED0351005368E9 /* AppDelegate.m */; };
+		A804B3621FED0352005368E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A804B3341FED0351005368E9 /* Assets.xcassets */; };
+		A804B3631FED0352005368E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804B3351FED0351005368E9 /* LaunchScreen.storyboard */; };
+		A804B3641FED0352005368E9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A804B3371FED0351005368E9 /* Info.plist */; };
+		A804B3651FED0352005368E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3381FED0351005368E9 /* main.m */; };
+		A804B36D1FED0352005368E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3491FED0351005368E9 /* ViewController.m */; };
+		A804B36E1FED0352005368E9 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B34B1FED0351005368E9 /* ViewController1.m */; };
+		A804B36F1FED0352005368E9 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B34D1FED0351005368E9 /* ViewController2.m */; };
+		A804B3701FED0352005368E9 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B34F1FED0351005368E9 /* ViewController3.m */; };
+		A804B3711FED0352005368E9 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = A804B3511FED0351005368E9 /* ViewController4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A804B31B1FECF758005368E9 /* STTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbar.h; sourceTree = "<group>"; };
-		A804B31C1FECF758005368E9 /* STTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbar.m; sourceTree = "<group>"; };
-		A804B31D1FECF758005368E9 /* STTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarController.h; sourceTree = "<group>"; };
-		A804B31E1FECF758005368E9 /* STTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarController.m; sourceTree = "<group>"; };
-		A804B31F1FECF758005368E9 /* STTabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItem.h; sourceTree = "<group>"; };
-		A804B3201FECF758005368E9 /* STTabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItem.m; sourceTree = "<group>"; };
-		A804B3211FECF758005368E9 /* STTabbarItemAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItemAttribute.h; sourceTree = "<group>"; };
-		A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemAttribute.m; sourceTree = "<group>"; };
-		A804B3231FECF758005368E9 /* STTabbarItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTabbarItemModel.h; sourceTree = "<group>"; };
-		A804B3241FECF758005368E9 /* STTabbarItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTabbarItemModel.m; sourceTree = "<group>"; };
-		A804B3251FECF758005368E9 /* UIView+STTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+STTabbar.h"; sourceTree = "<group>"; };
-		A804B3261FECF758005368E9 /* UIView+STTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+STTabbar.m"; sourceTree = "<group>"; };
-		A804B3271FECF758005368E9 /* UIViewController+STTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STTabbarController.h"; sourceTree = "<group>"; };
-		A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STTabbarController.m"; sourceTree = "<group>"; };
+		344D14128BF17201C5AF512E /* libPods-STTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STTabbarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D773982FF4E87BC3596E5B /* Pods-STTabbarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STTabbarController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STTabbarController/Pods-STTabbarController.debug.xcconfig"; sourceTree = "<group>"; };
+		A804B3321FED0351005368E9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A804B3331FED0351005368E9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A804B3341FED0351005368E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A804B3361FED0351005368E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A804B3371FED0351005368E9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A804B3381FED0351005368E9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A804B3481FED0351005368E9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A804B3491FED0351005368E9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A804B34A1FED0351005368E9 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		A804B34B1FED0351005368E9 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		A804B34C1FED0351005368E9 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		A804B34D1FED0351005368E9 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		A804B34E1FED0351005368E9 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
+		A804B34F1FED0351005368E9 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		A804B3501FED0351005368E9 /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		A804B3511FED0351005368E9 /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
 		A83F7C431FEA684B00EB5623 /* STTabbarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STTabbarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A83F7C461FEA684C00EB5623 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A83F7C471FEA684C00EB5623 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A83F7C491FEA684C00EB5623 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A83F7C4A1FEA684C00EB5623 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A83F7C4F1FEA684C00EB5623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A83F7C521FEA684C00EB5623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A83F7C541FEA684C00EB5623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A83F7C551FEA684C00EB5623 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A83F7C711FEB913800EB5623 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
-		A83F7C721FEB913800EB5623 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
-		A83F7C741FEB915600EB5623 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
-		A83F7C751FEB915600EB5623 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		A83F7C771FEB916C00EB5623 /* ViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
-		A83F7C781FEB916C00EB5623 /* ViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
-		A83F7C7A1FEB917E00EB5623 /* ViewController4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
-		A83F7C7B1FEB917E00EB5623 /* ViewController4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		DF281343225266947E730481 /* Pods-STTabbarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STTabbarController.release.xcconfig"; path = "Pods/Target Support Files/Pods-STTabbarController/Pods-STTabbarController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,29 +48,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B01EBEFCDD1FA4469DF909B /* libPods-STTabbarController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A804B31A1FECF758005368E9 /* STTabbarController */ = {
+		3F38D6EA03885D001E08846E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A804B3271FECF758005368E9 /* UIViewController+STTabbarController.h */,
-				A804B3281FECF758005368E9 /* UIViewController+STTabbarController.m */,
-				A804B3211FECF758005368E9 /* STTabbarItemAttribute.h */,
-				A804B3221FECF758005368E9 /* STTabbarItemAttribute.m */,
-				A804B31D1FECF758005368E9 /* STTabbarController.h */,
-				A804B31E1FECF758005368E9 /* STTabbarController.m */,
-				A804B3231FECF758005368E9 /* STTabbarItemModel.h */,
-				A804B3241FECF758005368E9 /* STTabbarItemModel.m */,
-				A804B31F1FECF758005368E9 /* STTabbarItem.h */,
-				A804B3201FECF758005368E9 /* STTabbarItem.m */,
-				A804B3251FECF758005368E9 /* UIView+STTabbar.h */,
-				A804B3261FECF758005368E9 /* UIView+STTabbar.m */,
-				A804B31B1FECF758005368E9 /* STTabbar.h */,
-				A804B31C1FECF758005368E9 /* STTabbar.m */,
+				68D773982FF4E87BC3596E5B /* Pods-STTabbarController.debug.xcconfig */,
+				DF281343225266947E730481 /* Pods-STTabbarController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5EC86673DA31181119736CE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344D14128BF17201C5AF512E /* libPods-STTabbarController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A804B3301FED0351005368E9 /* STTabbarControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A804B3311FED0351005368E9 /* STTabbarController */,
+			);
+			path = STTabbarControllerDemo;
+			sourceTree = SOURCE_ROOT;
+		};
+		A804B3311FED0351005368E9 /* STTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				A804B3321FED0351005368E9 /* AppDelegate.h */,
+				A804B3331FED0351005368E9 /* AppDelegate.m */,
+				A804B3341FED0351005368E9 /* Assets.xcassets */,
+				A804B3351FED0351005368E9 /* LaunchScreen.storyboard */,
+				A804B3371FED0351005368E9 /* Info.plist */,
+				A804B3381FED0351005368E9 /* main.m */,
+				A804B3481FED0351005368E9 /* ViewController.h */,
+				A804B3491FED0351005368E9 /* ViewController.m */,
+				A804B34A1FED0351005368E9 /* ViewController1.h */,
+				A804B34B1FED0351005368E9 /* ViewController1.m */,
+				A804B34C1FED0351005368E9 /* ViewController2.h */,
+				A804B34D1FED0351005368E9 /* ViewController2.m */,
+				A804B34E1FED0351005368E9 /* ViewController3.h */,
+				A804B34F1FED0351005368E9 /* ViewController3.m */,
+				A804B3501FED0351005368E9 /* ViewController4.h */,
+				A804B3511FED0351005368E9 /* ViewController4.m */,
 			);
 			path = STTabbarController;
 			sourceTree = "<group>";
@@ -96,6 +108,8 @@
 			children = (
 				A83F7C451FEA684B00EB5623 /* STTabbarController */,
 				A83F7C441FEA684B00EB5623 /* Products */,
+				3F38D6EA03885D001E08846E /* Pods */,
+				5EC86673DA31181119736CE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,23 +124,7 @@
 		A83F7C451FEA684B00EB5623 /* STTabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				A804B31A1FECF758005368E9 /* STTabbarController */,
-				A83F7C461FEA684C00EB5623 /* AppDelegate.h */,
-				A83F7C471FEA684C00EB5623 /* AppDelegate.m */,
-				A83F7C491FEA684C00EB5623 /* ViewController.h */,
-				A83F7C4A1FEA684C00EB5623 /* ViewController.m */,
-				A83F7C711FEB913800EB5623 /* ViewController1.h */,
-				A83F7C721FEB913800EB5623 /* ViewController1.m */,
-				A83F7C741FEB915600EB5623 /* ViewController2.h */,
-				A83F7C751FEB915600EB5623 /* ViewController2.m */,
-				A83F7C771FEB916C00EB5623 /* ViewController3.h */,
-				A83F7C781FEB916C00EB5623 /* ViewController3.m */,
-				A83F7C7A1FEB917E00EB5623 /* ViewController4.h */,
-				A83F7C7B1FEB917E00EB5623 /* ViewController4.m */,
-				A83F7C4F1FEA684C00EB5623 /* Assets.xcassets */,
-				A83F7C511FEA684C00EB5623 /* LaunchScreen.storyboard */,
-				A83F7C541FEA684C00EB5623 /* Info.plist */,
-				A83F7C551FEA684C00EB5623 /* main.m */,
+				A804B3301FED0351005368E9 /* STTabbarControllerDemo */,
 			);
 			path = STTabbarController;
 			sourceTree = "<group>";
@@ -138,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A83F7C591FEA684C00EB5623 /* Build configuration list for PBXNativeTarget "STTabbarController" */;
 			buildPhases = (
+				6EC4B432DC88AD44A3274434 /* [CP] Check Pods Manifest.lock */,
 				A83F7C3F1FEA684B00EB5623 /* Sources */,
 				A83F7C401FEA684B00EB5623 /* Frameworks */,
 				A83F7C411FEA684B00EB5623 /* Resources */,
+				6A7522E2B516720662B0E3B9 /* [CP] Embed Pods Frameworks */,
+				008B37AEB28BE34DBE2BD78C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,42 +190,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A83F7C531FEA684C00EB5623 /* LaunchScreen.storyboard in Resources */,
-				A83F7C501FEA684C00EB5623 /* Assets.xcassets in Resources */,
+				A804B3641FED0352005368E9 /* Info.plist in Resources */,
+				A804B3631FED0352005368E9 /* LaunchScreen.storyboard in Resources */,
+				A804B3621FED0352005368E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		008B37AEB28BE34DBE2BD78C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-STTabbarController/Pods-STTabbarController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A7522E2B516720662B0E3B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-STTabbarController/Pods-STTabbarController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EC4B432DC88AD44A3274434 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-STTabbarController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A83F7C3F1FEA684B00EB5623 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A804B32C1FECF758005368E9 /* STTabbarItemAttribute.m in Sources */,
-				A804B32F1FECF758005368E9 /* UIViewController+STTabbarController.m in Sources */,
-				A804B32E1FECF758005368E9 /* UIView+STTabbar.m in Sources */,
-				A804B3291FECF758005368E9 /* STTabbar.m in Sources */,
-				A83F7C4B1FEA684C00EB5623 /* ViewController.m in Sources */,
-				A83F7C7C1FEB917E00EB5623 /* ViewController4.m in Sources */,
-				A83F7C761FEB915600EB5623 /* ViewController2.m in Sources */,
-				A83F7C561FEA684C00EB5623 /* main.m in Sources */,
-				A804B32A1FECF758005368E9 /* STTabbarController.m in Sources */,
-				A83F7C731FEB913900EB5623 /* ViewController1.m in Sources */,
-				A804B32B1FECF758005368E9 /* STTabbarItem.m in Sources */,
-				A804B32D1FECF758005368E9 /* STTabbarItemModel.m in Sources */,
-				A83F7C481FEA684C00EB5623 /* AppDelegate.m in Sources */,
-				A83F7C791FEB916C00EB5623 /* ViewController3.m in Sources */,
+				A804B3651FED0352005368E9 /* main.m in Sources */,
+				A804B36D1FED0352005368E9 /* ViewController.m in Sources */,
+				A804B3711FED0352005368E9 /* ViewController4.m in Sources */,
+				A804B36F1FED0352005368E9 /* ViewController2.m in Sources */,
+				A804B36E1FED0352005368E9 /* ViewController1.m in Sources */,
+				A804B3611FED0352005368E9 /* AppDelegate.m in Sources */,
+				A804B3701FED0352005368E9 /* ViewController3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A83F7C511FEA684C00EB5623 /* LaunchScreen.storyboard */ = {
+		A804B3351FED0351005368E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A83F7C521FEA684C00EB5623 /* Base */,
+				A804B3361FED0351005368E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -338,10 +384,11 @@
 		};
 		A83F7C5A1FEA684C00EB5623 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D773982FF4E87BC3596E5B /* Pods-STTabbarController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = STTabbarController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/STTabbarControllerDemo/STTabbarController/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Suning.STTabbarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,10 +398,11 @@
 		};
 		A83F7C5B1FEA684C00EB5623 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF281343225266947E730481 /* Pods-STTabbarController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = STTabbarController/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/STTabbarControllerDemo/STTabbarController/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Suning.STTabbarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

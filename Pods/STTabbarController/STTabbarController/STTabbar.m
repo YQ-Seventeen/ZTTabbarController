@@ -7,7 +7,7 @@
 //
 #import "STTabbar.h"
 #import "STTabbarItem.h"
-#import "UIView+STTabbar.h"
+#import "UIView+Util.h"
 @implementation STTabbar {
     NSArray<STTabbarItem *> *_tabbarItem;
 }

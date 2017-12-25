@@ -7,7 +7,7 @@
 //
 #import "STTabbarItem.h"
 #import "STTabbarItemModel.h"
-#import "UIView+STTabbar.h"
+#import "UIView+Util.h"
 #import "STTabbarItemAttribute.h"
 #define WIDTH_WITHTITLE_MAX 30
 #define HEIGHT_WITHTITLE_MAX 30

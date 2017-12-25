@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Suning. All rights reserved.
 //
 #import "STTabbarItemModel.h"
-#import "UIView+STTabbar.h"
+#import "UIView+Util.h"
 @implementation STTabbarItemModel
 - (instancetype)initWithNormalImageName:(NSString *)normalImageName andSelectImageName:(NSString *)selectImageName andTitle:(NSString *)title {
     self = [super init];
