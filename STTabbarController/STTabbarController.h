@@ -16,7 +16,8 @@
 - (BOOL)STTabbarController:(STTabbarController *)tabbarController ShouldChangeSelectIndex:(NSInteger)selectIndex;
 @end
 @interface STTabbarController : UIViewController
-@property (assign, nonatomic) UIRectEdge rectEdge;
+
+@property (assign, nonatomic) UIRectEdge rectEdge NS_AVAILABLE_IOS(7_0);
 @property (strong, nonatomic) NSArray<__kindof UIViewController *> *childViewControllers;
 @property (strong, nonatomic) NSArray<__kindof STTabbarItemModel *> *items;
 @property (assign, nonatomic) BOOL isInitalAllChildVCDirectly;

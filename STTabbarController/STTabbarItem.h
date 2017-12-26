@@ -15,17 +15,4 @@
 @property (weak, nonatomic) STTabbarItemAttribute *attribute;
 @property (assign, nonatomic) BOOL select;
 @end
-@interface UIView (STTabbar)
-@property (strong, nonatomic) STTabbarController *st_tabbar;
-@end
-@implementation UIView (STTabbar)
-- (void)setSt_tabbar:(STTabbarController *)st_tabbar {
-    if (st_tabbar) {
-        SEL storeKey = @selector(st_tabbar);
-        objc_setAssociatedObject(self, storeKey, st_tabbar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-}
-- (STTabbarController *)st_tabbar {
-    return objc_getAssociatedObject(self, _cmd);
-}
-@end
+

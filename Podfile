@@ -6,5 +6,6 @@ target 'STTabbarController' do
   # use_frameworks!
 
   # Pods for STTabbarController
-   pod 'STTabbarController', :git => 'https://github.com/YQ-Seventeen/STTabbarController.git'
+#   pod 'STTabbarController', :git => 'https://github.com/YQ-Seventeen/STTabbarController.git'
+   pod 'STTabbarController', :path => '../STTabbarController'
 end

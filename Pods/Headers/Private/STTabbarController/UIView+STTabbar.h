@@ -1,1 +1,1 @@
-../../../STTabbarController/STTabbarController/UIView+STTabbar.h
+../../../../STTabbarController/UIView+STTabbar.h

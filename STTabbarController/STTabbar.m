@@ -8,6 +8,7 @@
 #import "STTabbar.h"
 #import "STTabbarItem.h"
 #import "UIView+STTabbar.h"
+#import "STTabbarConstant.h"
 @implementation STTabbar {
     NSArray<STTabbarItem *> *_tabbarItem;
 }
@@ -26,8 +27,13 @@
 }
 - (void)setupTabbar {
     CGFloat w            = self.st_w / _items.count;
-    CGFloat h            = self.st_h;
+    CGFloat h            = STTabbarContentHeight;
     NSMutableArray *temp = [NSMutableArray new];
+    
+    
+    
+    
+    
     for (NSInteger i = 0, max = self.items.count; i < max; ++i) {
         STTabbarItem *tabbarItem = [[STTabbarItem alloc] init];
         CGFloat x                = i * w;

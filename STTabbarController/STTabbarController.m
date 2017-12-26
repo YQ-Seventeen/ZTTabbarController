@@ -9,6 +9,7 @@
 #import "STTabbar.h"
 #import "UIView+STTabbar.h"
 #import "UIViewController+STTabbarController.h"
+#import "STTabbarConstant.h"
 #define MAX_ITEM_COUNT 5
 #define TABBAR_SYSTEM_HEIGHT 49.0f
 @interface STTabbarController ()
@@ -70,7 +71,7 @@
     self.itemAttributeAppearce = [STTabbarItemAttribute defaultAttribute];
     self.rectEdge              = UIRectEdgeNone;
 }
-- (void)dalayInitialization {
+- (void)delayInitialization {
     _tabbarHiddenY  = self.view.st_h;
     _tabbarDisplayY = self.view.st_h - _tabbar.st_h;
     //set childViewControllers edgesForExtendedLayout
@@ -105,7 +106,7 @@
     NSAssert([self checkAttribute], @"attribute error");
     [self generateAttributes];
     float tabbarW    = self.view.st_w;
-    float tabbarH    = TABBAR_SYSTEM_HEIGHT;
+    float tabbarH    = STTabbarDefaultHeight;
     float tabbarX    = 0;
     float tabbarY    = self.view.st_maxY - tabbarH;
     STTabbar *tabbar = [[STTabbar alloc] initWithFrame:CGRectMake(tabbarX, tabbarY, tabbarW, tabbarH)];
@@ -133,7 +134,7 @@
         self.itemsAttributes = temp;
     }
 }
-#define ST_NAVAGATIO
+
 - (void)updateContentFrame {
     _topViewController.view.frame = CGRectMake(0, 0, self.view.st_w, self.view.st_h);
 }
@@ -171,7 +172,7 @@
     if (self.items.count > 0 && !_tabbar) {
         [self setupTabbar];
     }
-    [self dalayInitialization];
+    [self delayInitialization];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
     _selectIndex = selectIndex;

@@ -9,11 +9,7 @@
 #import "STTabbarItemModel.h"
 #import "UIView+STTabbar.h"
 #import "STTabbarItemAttribute.h"
-#define WIDTH_WITHTITLE_MAX 30
-#define HEIGHT_WITHTITLE_MAX 30
-#define WIDTH_WITHOUTTITLE_MAX 41
-#define HEIGHT_WIDTHOUTTITLE_MAX 41
-#define SYSTEM_IMAGE_SIZE CGSizeMake(30, 30)
+#import "STTabbarConstant.h"
 static float imageTitleVSpace = 5.0f;
 CGSize st_calcuteTitleAdjustSize(STTabbarItemModel *model, UIFont *titleFont, UIView *v) {
     NSDictionary *dic  = @{NSFontAttributeName : titleFont};
@@ -27,15 +23,13 @@ CGSize st_calculateImageAdjustSize(UIImage *st_image, STTabbarItemModel *model) 
     CGSize imageSize = st_image.size;
     float maxWidth, maxHeight;
     if (model.title && model.title.length > 0) {
-        maxWidth  = WIDTH_WITHTITLE_MAX;
-        maxHeight = HEIGHT_WITHTITLE_MAX;
+        maxWidth  = STTabbarImageDefaultWidthWithTitle;
+        maxHeight = STTabbarImageDefaultHeightWithTitle;
     } else {
-        maxWidth  = WIDTH_WITHOUTTITLE_MAX;
-        maxHeight = HEIGHT_WIDTHOUTTITLE_MAX;
+        maxWidth  = STTabbarImageDefaultWidthWithoutTitle;
+        maxHeight = STTabbarImageDefaultHeightWithoutTitle;
     }
-    if (imageSize.width >= maxWidth || imageSize.height >= maxHeight) {
-        imageSize = SYSTEM_IMAGE_SIZE;
-    }
+    imageSize = CGSizeMake(MIN(maxWidth, st_image.size.width),MIN(maxHeight, st_image.size.height));
     return imageSize;
 }
 CGRect st_calculateImageAdjustPosition(UIImage *st_image, STTabbarItemModel *model, UIView *v, STTabbarItemAttribute *attribute) {
@@ -97,15 +91,9 @@ CGRect st_calcuteTitleAdjustPosition(STTabbarItemModel *model, UIView *v, STTabb
     [self addSubview:_itemImageView];
     [self addSubview:_itemTitleLabel];
 }
-#define SuppressPerformSelectorLeakWarning(Stuff)                               \
-    do {                                                                        \
-        _Pragma("clang diagnostic push")                                        \
-            _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
-                Stuff;                                                          \
-        _Pragma("clang diagnostic pop")                                         \
-    } while (0);
+
 - (void)addTapGesture {
-    SuppressPerformSelectorLeakWarning({
+    STAvoidPerformSelectorWarning({
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTabbarItem:)];
         [self addGestureRecognizer:tap];
         self.userInteractionEnabled = YES;
@@ -115,8 +103,7 @@ CGRect st_calcuteTitleAdjustPosition(STTabbarItemModel *model, UIView *v, STTabb
     [[NSNotificationCenter defaultCenter] postNotificationName:@"STTabbarItemDidClickNotification" object:@(ges.view.tag)];
 }
 - (void)setSelect:(BOOL)select {
-    if (_select == select)
-        return;
+    if (_select == select) return;
     NSString *imageKey;
     NSString *titleColorKey;
     if (select) {

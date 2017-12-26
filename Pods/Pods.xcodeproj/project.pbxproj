@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		158A73E391C676C4879836F481961DA2 /* STTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7362393DE9957B78F0CE70FFE3ECAA /* STTabbarItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		158A73E391C676C4879836F481961DA2 /* STTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D8FF4C3147117466C04DC8A217064 /* STTabbarItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		1EF52D3BB3FBF4691125D577D534687A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		3FC91435472FA7A1CD27EA02F2966174 /* UIViewController+STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD573F95B14F6D2F47CE5A3FA22E690 /* UIViewController+STTabbarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4DF1ED9619FBAF6CE8087141DAF08E5F /* STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3EFEE0ABCA686E88183E72B2A88EA0 /* STTabbarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3FC91435472FA7A1CD27EA02F2966174 /* UIViewController+STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF39F840247E836DCC2B5EDF2B00200B /* UIViewController+STTabbarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4DF1ED9619FBAF6CE8087141DAF08E5F /* STTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC87A50BA3087BDFC4BDEBD32DE074F /* STTabbarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		4F5982E8213342E160EAD3438385C6C1 /* Pods-STTabbarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4486518BE92C9B99BE6927664DB91C /* Pods-STTabbarController-dummy.m */; };
 		71E316FE64B41DB3C0469530E98B8171 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		73057ABE2E85414F12553186424EF844 /* UIViewController+STTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = F9F21435F5410BDE8436D48B550848FD /* UIViewController+STTabbarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		839113A8644CC62350090323B472A15C /* STTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 538DAB4C3C40ACDDF9DDEAEEC9299ED6 /* STTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8644B29E727C5A0FF2CAAEC14F2CA050 /* UIView+STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D301487340F2B600CA72F658A7A27416 /* UIView+STTabbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8E7B00BF3FF47DE5140927D973BB735E /* STTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA0648016433561E8505A62E3C765F /* STTabbarItemModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		73057ABE2E85414F12553186424EF844 /* UIViewController+STTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52333C9E70FE2DF633C373F258F41D13 /* UIViewController+STTabbarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		839113A8644CC62350090323B472A15C /* STTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 5565D08B4EBDB5A1F0B55E94F8B91895 /* STTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8644B29E727C5A0FF2CAAEC14F2CA050 /* UIView+STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDF5C03E966D2B76C16502C0E2E2ED8 /* UIView+STTabbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E7B00BF3FF47DE5140927D973BB735E /* STTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46719FB520F58B0C3A7D7A0D8ECF9022 /* STTabbarItemModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9D5477E1D9C28F0A71A57C447EE2D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		9F950BF4F5151A6E7FA1F43BD12C24FC /* STTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A15E132143D8EE6255A366D39C8C7FD /* STTabbarItemAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A1B30BD53DF8ADFA6A51241B7841C66A /* STTabbarItemAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = A556B9ABEBE123EB538A540D4138C480 /* STTabbarItemAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFE3E530DC0B8443ABF49A2CB13AE6B9 /* STTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF06A64C0D66C09734ABACE8DE7CCCD /* STTabbarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C37C37C95BB24B313A730D3652AE2157 /* STTabbarItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DA91479CB726103D79460372E3075579 /* STTabbarItemModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5A689CA7B134668195D1017A982E0EB /* STTabbarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379C84E094FC538D631F801FA950B32B /* STTabbarController-dummy.m */; };
-		CB93191382A3DF75A2CC7C3E0B6B335D /* STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BCA7ADF7D060E08618E3109E9D7B2C /* STTabbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D2CAAA5DAF4F59F05660731C5E5AF1DE /* UIView+STTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 569DFD111E53BCB4DA624C0E4FBD23F7 /* UIView+STTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECCD098F9BEA546B4F88C5D029114268 /* STTabbarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A7DADA361A075E5523988B2F71C29A06 /* STTabbarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F950BF4F5151A6E7FA1F43BD12C24FC /* STTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 006564A6105504C58138FB17A5D9F004 /* STTabbarItemAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A1B30BD53DF8ADFA6A51241B7841C66A /* STTabbarItemAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D1C6451D3BA71D7590BD4F4FE6FF4D /* STTabbarItemAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A835EC6B1FF1E64D00B490CB /* STTabbarConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = A835EC6A1FF1E64D00B490CB /* STTabbarConstant.m */; };
+		AFE3E530DC0B8443ABF49A2CB13AE6B9 /* STTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = B766DA9E8135327B0AEC5F56B5D60C3A /* STTabbarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C37C37C95BB24B313A730D3652AE2157 /* STTabbarItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B67DAC13209CF286CF84C43B46B5571 /* STTabbarItemModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A689CA7B134668195D1017A982E0EB /* STTabbarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0874F2B1DB007245B6EFAA9C98C6B8 /* STTabbarController-dummy.m */; };
+		CB93191382A3DF75A2CC7C3E0B6B335D /* STTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E52330EBB81764D087D3D33ECA0F5 /* STTabbar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D2CAAA5DAF4F59F05660731C5E5AF1DE /* UIView+STTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 299AFA446EB6A1AC307D1E929E4DA40C /* UIView+STTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECCD098F9BEA546B4F88C5D029114268 /* STTabbarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4090F93388C0A7A48F93541F4C8E436E /* STTabbarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,35 +40,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		006564A6105504C58138FB17A5D9F004 /* STTabbarItemAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItemAttribute.m; path = STTabbarController/STTabbarItemAttribute.m; sourceTree = "<group>"; };
+		15D1C6451D3BA71D7590BD4F4FE6FF4D /* STTabbarItemAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItemAttribute.h; path = STTabbarController/STTabbarItemAttribute.h; sourceTree = "<group>"; };
 		1D4486518BE92C9B99BE6927664DB91C /* Pods-STTabbarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-STTabbarController-dummy.m"; sourceTree = "<group>"; };
-		1DD573F95B14F6D2F47CE5A3FA22E690 /* UIViewController+STTabbarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+STTabbarController.m"; path = "STTabbarController/UIViewController+STTabbarController.m"; sourceTree = "<group>"; };
+		299AFA446EB6A1AC307D1E929E4DA40C /* UIView+STTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+STTabbar.h"; path = "STTabbarController/UIView+STTabbar.h"; sourceTree = "<group>"; };
 		2A199A7D0BBA673DD923612621BE1379 /* Pods-STTabbarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STTabbarController.debug.xcconfig"; sourceTree = "<group>"; };
-		2C7362393DE9957B78F0CE70FFE3ECAA /* STTabbarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItem.m; path = STTabbarController/STTabbarItem.m; sourceTree = "<group>"; };
-		2DBA0648016433561E8505A62E3C765F /* STTabbarItemModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItemModel.m; path = STTabbarController/STTabbarItemModel.m; sourceTree = "<group>"; };
-		379C84E094FC538D631F801FA950B32B /* STTabbarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STTabbarController-dummy.m"; sourceTree = "<group>"; };
-		3DF06A64C0D66C09734ABACE8DE7CCCD /* STTabbarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarController.h; path = STTabbarController/STTabbarController.h; sourceTree = "<group>"; };
-		538DAB4C3C40ACDDF9DDEAEEC9299ED6 /* STTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbar.h; path = STTabbarController/STTabbar.h; sourceTree = "<group>"; };
-		569DFD111E53BCB4DA624C0E4FBD23F7 /* UIView+STTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+STTabbar.h"; path = "STTabbarController/UIView+STTabbar.h"; sourceTree = "<group>"; };
+		2EDF5C03E966D2B76C16502C0E2E2ED8 /* UIView+STTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+STTabbar.m"; path = "STTabbarController/UIView+STTabbar.m"; sourceTree = "<group>"; };
+		4090F93388C0A7A48F93541F4C8E436E /* STTabbarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItem.h; path = STTabbarController/STTabbarItem.h; sourceTree = "<group>"; };
+		46719FB520F58B0C3A7D7A0D8ECF9022 /* STTabbarItemModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItemModel.m; path = STTabbarController/STTabbarItemModel.m; sourceTree = "<group>"; };
+		4EC87A50BA3087BDFC4BDEBD32DE074F /* STTabbarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarController.m; path = STTabbarController/STTabbarController.m; sourceTree = "<group>"; };
+		52333C9E70FE2DF633C373F258F41D13 /* UIViewController+STTabbarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+STTabbarController.h"; path = "STTabbarController/UIViewController+STTabbarController.h"; sourceTree = "<group>"; };
+		5565D08B4EBDB5A1F0B55E94F8B91895 /* STTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbar.h; path = STTabbarController/STTabbar.h; sourceTree = "<group>"; };
 		59352E12C6810D85EB51CCFFD5185378 /* Pods-STTabbarController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-STTabbarController-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5A15E132143D8EE6255A366D39C8C7FD /* STTabbarItemAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItemAttribute.m; path = STTabbarController/STTabbarItemAttribute.m; sourceTree = "<group>"; };
+		5B67DAC13209CF286CF84C43B46B5571 /* STTabbarItemModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItemModel.h; path = STTabbarController/STTabbarItemModel.h; sourceTree = "<group>"; };
+		5D3101D4D143241576E51F516E70CFBA /* STTabbarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STTabbarController-prefix.pch"; sourceTree = "<group>"; };
 		5F73F9B1AEF9902E9DBC627EF5B0C4D5 /* Pods-STTabbarController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-STTabbarController-acknowledgements.plist"; sourceTree = "<group>"; };
-		6D44F373DA60D0A337E578F72FE6AE93 /* STTabbarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STTabbarController.xcconfig; sourceTree = "<group>"; };
+		6B5D8FF4C3147117466C04DC8A217064 /* STTabbarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarItem.m; path = STTabbarController/STTabbarItem.m; sourceTree = "<group>"; };
 		71705DC7DEE480F4CD798FA53FD678CA /* Pods-STTabbarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-STTabbarController.release.xcconfig"; sourceTree = "<group>"; };
 		729F2FCFCECDD5082364F3621FF9BE73 /* libSTTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTTabbarController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0874F2B1DB007245B6EFAA9C98C6B8 /* STTabbarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STTabbarController-dummy.m"; sourceTree = "<group>"; };
 		828CB5F2969F5EA64E0553925085E837 /* Pods-STTabbarController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-STTabbarController-frameworks.sh"; sourceTree = "<group>"; };
 		83AFD6706F50578874728A67DCD388CB /* libPods-STTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STTabbarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93BCA7ADF7D060E08618E3109E9D7B2C /* STTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbar.m; path = STTabbarController/STTabbar.m; sourceTree = "<group>"; };
-		A556B9ABEBE123EB538A540D4138C480 /* STTabbarItemAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItemAttribute.h; path = STTabbarController/STTabbarItemAttribute.h; sourceTree = "<group>"; };
-		A7DADA361A075E5523988B2F71C29A06 /* STTabbarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItem.h; path = STTabbarController/STTabbarItem.h; sourceTree = "<group>"; };
+		9C8E52330EBB81764D087D3D33ECA0F5 /* STTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbar.m; path = STTabbarController/STTabbar.m; sourceTree = "<group>"; };
+		A835EC6A1FF1E64D00B490CB /* STTabbarConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STTabbarConstant.m; sourceTree = "<group>"; };
+		A835EC6C1FF1E66700B490CB /* STTabbarConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STTabbarConstant.h; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D301487340F2B600CA72F658A7A27416 /* UIView+STTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+STTabbar.m"; path = "STTabbarController/UIView+STTabbar.m"; sourceTree = "<group>"; };
+		B766DA9E8135327B0AEC5F56B5D60C3A /* STTabbarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarController.h; path = STTabbarController/STTabbarController.h; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DA91479CB726103D79460372E3075579 /* STTabbarItemModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTabbarItemModel.h; path = STTabbarController/STTabbarItemModel.h; sourceTree = "<group>"; };
-		DC3EFEE0ABCA686E88183E72B2A88EA0 /* STTabbarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTabbarController.m; path = STTabbarController/STTabbarController.m; sourceTree = "<group>"; };
+		DB11D244F2251D2B00D3C11BA4C03CC3 /* STTabbarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STTabbarController.xcconfig; sourceTree = "<group>"; };
 		DC4182B86D80EA176C67B390EF92A9AD /* Pods-STTabbarController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-STTabbarController-resources.sh"; sourceTree = "<group>"; };
-		E6BC09D049775D4EE4A1295E0829509D /* STTabbarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STTabbarController-prefix.pch"; sourceTree = "<group>"; };
-		F9F21435F5410BDE8436D48B550848FD /* UIViewController+STTabbarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+STTabbarController.h"; path = "STTabbarController/UIViewController+STTabbarController.h"; sourceTree = "<group>"; };
+		DF39F840247E836DCC2B5EDF2B00200B /* UIViewController+STTabbarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+STTabbarController.m"; path = "STTabbarController/UIViewController+STTabbarController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		054C81B5FAA1694BFBB22EAFC04EBE54 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB11D244F2251D2B00D3C11BA4C03CC3 /* STTabbarController.xcconfig */,
+				7B0874F2B1DB007245B6EFAA9C98C6B8 /* STTabbarController-dummy.m */,
+				5D3101D4D143241576E51F516E70CFBA /* STTabbarController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/STTabbarController";
+			sourceTree = "<group>";
+		};
+		38DEC63308A3D9323ABB6AC99DDC7593 /* STTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				5565D08B4EBDB5A1F0B55E94F8B91895 /* STTabbar.h */,
+				9C8E52330EBB81764D087D3D33ECA0F5 /* STTabbar.m */,
+				B766DA9E8135327B0AEC5F56B5D60C3A /* STTabbarController.h */,
+				4EC87A50BA3087BDFC4BDEBD32DE074F /* STTabbarController.m */,
+				4090F93388C0A7A48F93541F4C8E436E /* STTabbarItem.h */,
+				6B5D8FF4C3147117466C04DC8A217064 /* STTabbarItem.m */,
+				15D1C6451D3BA71D7590BD4F4FE6FF4D /* STTabbarItemAttribute.h */,
+				006564A6105504C58138FB17A5D9F004 /* STTabbarItemAttribute.m */,
+				5B67DAC13209CF286CF84C43B46B5571 /* STTabbarItemModel.h */,
+				46719FB520F58B0C3A7D7A0D8ECF9022 /* STTabbarItemModel.m */,
+				299AFA446EB6A1AC307D1E929E4DA40C /* UIView+STTabbar.h */,
+				2EDF5C03E966D2B76C16502C0E2E2ED8 /* UIView+STTabbar.m */,
+				52333C9E70FE2DF633C373F258F41D13 /* UIViewController+STTabbarController.h */,
+				DF39F840247E836DCC2B5EDF2B00200B /* UIViewController+STTabbarController.m */,
+				A835EC6C1FF1E66700B490CB /* STTabbarConstant.h */,
+				A835EC6A1FF1E64D00B490CB /* STTabbarConstant.m */,
+				054C81B5FAA1694BFBB22EAFC04EBE54 /* Support Files */,
+			);
+			name = STTabbarController;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,23 +147,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6F641169A84974EC3EECA316FE45D63D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E98128C0BF9371CE90E71E07746F1CA9 /* STTabbarController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				8484956EB0CC5B4246C79107819D2F34 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				6F641169A84974EC3EECA316FE45D63D /* Pods */,
 				A912B54044F37B5147CC3CCF90749FCB /* Products */,
 				FD3C3AE0B85B8A95CE3D1034D969A16E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8484956EB0CC5B4246C79107819D2F34 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38DEC63308A3D9323ABB6AC99DDC7593 /* STTabbarController */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		8D5D4A5D2A6E2DB403B2DF485C25F994 /* Pods-STTabbarController */ = {
@@ -149,39 +188,6 @@
 				729F2FCFCECDD5082364F3621FF9BE73 /* libSTTabbarController.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DEC6F67D635737588E50A3C40580535F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6D44F373DA60D0A337E578F72FE6AE93 /* STTabbarController.xcconfig */,
-				379C84E094FC538D631F801FA950B32B /* STTabbarController-dummy.m */,
-				E6BC09D049775D4EE4A1295E0829509D /* STTabbarController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/STTabbarController";
-			sourceTree = "<group>";
-		};
-		E98128C0BF9371CE90E71E07746F1CA9 /* STTabbarController */ = {
-			isa = PBXGroup;
-			children = (
-				538DAB4C3C40ACDDF9DDEAEEC9299ED6 /* STTabbar.h */,
-				93BCA7ADF7D060E08618E3109E9D7B2C /* STTabbar.m */,
-				3DF06A64C0D66C09734ABACE8DE7CCCD /* STTabbarController.h */,
-				DC3EFEE0ABCA686E88183E72B2A88EA0 /* STTabbarController.m */,
-				A7DADA361A075E5523988B2F71C29A06 /* STTabbarItem.h */,
-				2C7362393DE9957B78F0CE70FFE3ECAA /* STTabbarItem.m */,
-				A556B9ABEBE123EB538A540D4138C480 /* STTabbarItemAttribute.h */,
-				5A15E132143D8EE6255A366D39C8C7FD /* STTabbarItemAttribute.m */,
-				DA91479CB726103D79460372E3075579 /* STTabbarItemModel.h */,
-				2DBA0648016433561E8505A62E3C765F /* STTabbarItemModel.m */,
-				569DFD111E53BCB4DA624C0E4FBD23F7 /* UIView+STTabbar.h */,
-				D301487340F2B600CA72F658A7A27416 /* UIView+STTabbar.m */,
-				F9F21435F5410BDE8436D48B550848FD /* UIViewController+STTabbarController.h */,
-				1DD573F95B14F6D2F47CE5A3FA22E690 /* UIViewController+STTabbarController.m */,
-				DEC6F67D635737588E50A3C40580535F /* Support Files */,
-			);
-			path = STTabbarController;
 			sourceTree = "<group>";
 		};
 		FD3C3AE0B85B8A95CE3D1034D969A16E /* Targets Support Files */ = {
@@ -283,6 +289,7 @@
 				4DF1ED9619FBAF6CE8087141DAF08E5F /* STTabbarController.m in Sources */,
 				158A73E391C676C4879836F481961DA2 /* STTabbarItem.m in Sources */,
 				9F950BF4F5151A6E7FA1F43BD12C24FC /* STTabbarItemAttribute.m in Sources */,
+				A835EC6B1FF1E64D00B490CB /* STTabbarConstant.m in Sources */,
 				8E7B00BF3FF47DE5140927D973BB735E /* STTabbarItemModel.m in Sources */,
 				8644B29E727C5A0FF2CAAEC14F2CA050 /* UIView+STTabbar.m in Sources */,
 				3FC91435472FA7A1CD27EA02F2966174 /* UIViewController+STTabbarController.m in Sources */,
@@ -407,7 +414,7 @@
 		};
 		CE8F214D1BFDEA5AE217F4DDDAF5BAC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D44F373DA60D0A337E578F72FE6AE93 /* STTabbarController.xcconfig */;
+			baseConfigurationReference = DB11D244F2251D2B00D3C11BA4C03CC3 /* STTabbarController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -488,7 +495,7 @@
 		};
 		E529124DF74D550437BAAE24BB13EB45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D44F373DA60D0A337E578F72FE6AE93 /* STTabbarController.xcconfig */;
+			baseConfigurationReference = DB11D244F2251D2B00D3C11BA4C03CC3 /* STTabbarController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
