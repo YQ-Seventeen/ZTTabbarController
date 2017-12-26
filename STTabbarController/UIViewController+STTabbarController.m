@@ -8,23 +8,7 @@
 #import "UIViewController+STTabbarController.h"
 #import <objc/runtime.h>
 @implementation UIViewController (STTabbarController)
-+ (void)load {
-    Method viewWillAppear    = class_getInstanceMethod([self class], @selector(viewWillAppear:));
-    Method st_viewWillAppear = class_getInstanceMethod([self class], @selector(st_viewWillAppear:));
-    method_exchangeImplementations(viewWillAppear, st_viewWillAppear);
-}
-- (void)st_viewWillAppear:(BOOL)animated {
-    [self st_viewWillAppear:animated];
-    if (!self.navigationController) {
-        return;
-    }
-    if (self.navigationController.childViewControllers.count == 1) {
-        return;
-    }
-    if (self.st_tabbar.isTabbarHidden == NO && self.hidesTabbarWhenPushed) {
-        [self.st_tabbar setTabbarHidden:YES];
-    }
-}
+
 - (void)setSt_tabbar:(STTabbarController *)st_tabbar {
     if (st_tabbar) {
         SEL storeKey = @selector(st_tabbar);
@@ -32,7 +16,21 @@
     }
 }
 - (STTabbarController *)st_tabbar {
-    return objc_getAssociatedObject(self, _cmd);
+    STTabbarController * tabbarController = objc_getAssociatedObject(self, _cmd);
+    if (tabbarController) {
+        return tabbarController;
+    }
+    else{
+        if (self.navigationController) {
+            return self.navigationController.st_tabbar;
+        }
+        else if(self.presentingViewController){
+            return self.presentingViewController.st_tabbar;
+        }
+        else{
+            return nil;
+        }
+    }
 }
 - (void)setHidesTabbarWhenPushed:(BOOL)hidesTabbarWhenPushed {
     SEL storeKey = @selector(hidesTabbarWhenPushed);

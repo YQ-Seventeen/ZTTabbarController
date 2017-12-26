@@ -25,10 +25,14 @@
     self.window = mainWindow;
     
     STTabbarItemAttribute * attribute = [STTabbarItemAttribute defaultAttribute];
+    attribute.itemBgColor = [UIColor lightGrayColor];
+    attribute.itemBgSelectColor = [UIColor redColor];
+//    attribute.itemImgSize = CGSizeMake(20, 20);
     STTabbarController * tabbarController  = [STTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;
     tabbarController.rectEdge = UIRectEdgeNone;
+    tabbarController.backgroundViewColor = [UIColor lightGrayColor];
     self.window.rootViewController = tabbarController;
     [self.window makeKeyAndVisible];
     return YES;

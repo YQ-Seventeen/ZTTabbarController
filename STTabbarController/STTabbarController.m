@@ -71,7 +71,7 @@
     self.itemAttributeAppearce = [STTabbarItemAttribute defaultAttribute];
     self.rectEdge              = UIRectEdgeNone;
 }
-- (void)delayInitialization {
+- (void)setup_afterSetChildVC {
     _tabbarHiddenY  = self.view.st_h;
     _tabbarDisplayY = self.view.st_h - _tabbar.st_h;
     //set childViewControllers edgesForExtendedLayout
@@ -86,6 +86,10 @@
         }
     }
     [self makeChildRelateRootTabbarController];
+    
+    
+    //check items title if not exist then use childViewController's title if it exists
+    [self checkItemsTitle];
 }
 - (void)makeChildRelateRootTabbarController {
     [self.childViewControllers makeObjectsPerformSelector:@selector(setSt_tabbar:) withObject:self];
@@ -96,6 +100,20 @@
         }
     }];
 }
+
+- (void)checkItemsTitle {
+    for (STTabbarItemModel * itemModel in _tabbar.items) {
+        NSInteger index = [_tabbar.items indexOfObject:itemModel];
+        UIViewController * vc = self.childViewControllers[index];
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = [(UINavigationController *)vc topViewController];
+        }
+        if (STR_IS_EMPTY(itemModel.title) && !STR_IS_EMPTY(vc.title)) {
+            itemModel.title = vc.title;
+        }
+    }
+}
+
 - (void)setupTabbar {
     if (!_items || !_items.count || _items.count > MAX_ITEM_COUNT) {
         NSAssert(NO, @"error");
@@ -158,6 +176,14 @@
     }
 }
 #pragma mark-- public Methods
+
+- (void)setBackgroundViewColor:(UIColor *)backgroundViewColor {
+    if (backgroundViewColor && _backgroundViewColor != backgroundViewColor) {
+        _backgroundViewColor = backgroundViewColor;
+        _tabbar.backgroundColor = backgroundViewColor;
+    }
+}
+
 - (void)setItems:(NSArray<__kindof STTabbarItemModel *> *)items {
     if (_items != items) {
         _items = items;
@@ -172,7 +198,7 @@
     if (self.items.count > 0 && !_tabbar) {
         [self setupTabbar];
     }
-    [self delayInitialization];
+    [self setup_afterSetChildVC];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
     _selectIndex = selectIndex;
@@ -191,6 +217,7 @@
     }
     _tabbar.selectIndex = selectIndex;
 }
+
 - (void)setTabbarHidden:(BOOL)hidden animated:(BOOL)animated {
     float afterHeight = _tabbarDisplayY;
     if (hidden) {

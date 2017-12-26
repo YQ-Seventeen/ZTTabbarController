@@ -8,8 +8,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface STTabbarItemAttribute : NSObject
-@property (strong, nonatomic) UIColor *titleColor;
-@property (strong, nonatomic) UIColor *titleSelectColor;
-@property (strong, nonatomic) UIFont *titleFont;
+@property (strong, nonatomic) UIColor *itemTitleColor;
+@property (strong, nonatomic) UIColor *itemTitleSelectColor;
+@property (strong, nonatomic) UIFont  *itemTitleFont;
+@property (strong, nonatomic) UIColor *itemBgColor;
+@property (strong, nonatomic) UIColor *itemBgSelectColor;
+@property (assign, nonatomic) CGSize   itemImgSize;
 + (instancetype)defaultAttribute;
 @end

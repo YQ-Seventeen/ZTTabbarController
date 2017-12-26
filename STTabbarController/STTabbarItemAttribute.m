@@ -9,9 +9,10 @@
 @implementation STTabbarItemAttribute
 + (instancetype)defaultAttribute {
     STTabbarItemAttribute *attribute = [STTabbarItemAttribute new];
-    attribute.titleColor             = [UIColor darkTextColor];
-    attribute.titleSelectColor       = [UIColor blueColor];
-    attribute.titleFont              = [UIFont systemFontOfSize:10];
+    attribute.itemTitleColor             = [UIColor darkTextColor];
+    attribute.itemTitleSelectColor       = [UIColor blueColor];
+    attribute.itemTitleFont              = [UIFont systemFontOfSize:10];
+    attribute.itemImgSize                = CGSizeMake(30, 30);
     return attribute;
 }
 @end

@@ -17,5 +17,4 @@
 @property (assign, nonatomic, readonly) CGFloat st_maxX;
 @property (assign, nonatomic, readonly) CGFloat st_maxY;
 
-@property (strong, nonatomic,setter=setSTTabbar:) STTabbarController *st_tabbar;
 @end
