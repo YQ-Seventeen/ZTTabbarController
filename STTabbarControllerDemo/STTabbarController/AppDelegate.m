@@ -27,7 +27,7 @@
     STTabbarItemAttribute * attribute = [STTabbarItemAttribute defaultAttribute];
     attribute.itemBgColor = [UIColor lightGrayColor];
     attribute.itemBgSelectColor = [UIColor redColor];
-//    attribute.itemImgSize = CGSizeMake(20, 20);
+    attribute.itemImgSize = CGSizeMake(20, 20);
     STTabbarController * tabbarController  = [STTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;

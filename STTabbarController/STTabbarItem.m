@@ -36,7 +36,7 @@ CGSize st_calculateImageAdjustSize(UIImage *st_image, STTabbarItemModel *model,S
         maxWidth  = STTabbarImageDefaultWidthWithoutTitle;
         maxHeight = STTabbarImageDefaultHeightWithoutTitle;
     }
-    imageSize = CGSizeMake(MIN(maxWidth, st_image.size.width),MIN(maxHeight, st_image.size.height));
+    imageSize = CGSizeMake(MIN(maxWidth, imageSize.width),MIN(maxHeight, imageSize.height));
     return imageSize;
 }
 CGRect st_calculateImageAdjustPosition(UIImage *st_image, STTabbarItemModel *model, UIView *v, STTabbarItemAttribute *attribute) {
