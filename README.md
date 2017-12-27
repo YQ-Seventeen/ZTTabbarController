@@ -5,19 +5,10 @@
 [![iPhone screenshot](Screenshots/iPhone.png)](Screenshots/iPhone.png)
 
 * Supports iPad and iPhone
-* Supports landscape and portrait orientations
 * Can be used inside UINavigationController
-* Customizable badges
 
 # todo list
-- [ ]todo list
-- [ ] bbs 维护
-- [ ] Desktop 发布新版
-    - [x] Markdown编辑器添加Todo list
-    - [x] 修复白屏问题
-    - [ ] 修复issue3
-- [ ] Leanote 维护
-    - [ ] 修复issue4
+
 
 ## Installation
 
@@ -88,8 +79,8 @@ this class is design to change item behavior by user
 ## Requirements
 
 * ARC
-* iOS 5.0 or later
-* Xcode 5
+* iOS 8.0 or later
+* Xcode 7
 
 ## Contact
 
