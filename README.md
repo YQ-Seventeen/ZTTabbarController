@@ -1,8 +1,8 @@
 # STTabBarController
 
-[![iPad screenshot](Screenshots/iPad.png)](Screenshots/iPhone.png)
+[![iPad screenshot](Screenshots/ipad.png)](Screenshots/iPhone.png)
 
-[![iPhone screenshot](Screenshots/iPhone.png)](Screenshots/iPhone.png)
+[![iPhone screenshot](Screenshots/iphone.png)](Screenshots/iPhone.png)
 
 * Supports iPad and iPhone
 * Can be used inside UINavigationController
