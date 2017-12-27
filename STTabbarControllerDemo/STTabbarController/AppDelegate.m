@@ -25,14 +25,11 @@
     self.window = mainWindow;
     
     STTabbarItemAttribute * attribute = [STTabbarItemAttribute defaultAttribute];
-    attribute.itemBgColor = [UIColor lightGrayColor];
-    attribute.itemBgSelectColor = [UIColor redColor];
-    attribute.itemImgSize = CGSizeMake(20, 20);
+    attribute.itemImgSize = CGSizeMake(25, 25);
     STTabbarController * tabbarController  = [STTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;
     tabbarController.rectEdge = UIRectEdgeNone;
-    tabbarController.backgroundViewColor = [UIColor lightGrayColor];
     self.window.rootViewController = tabbarController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -58,18 +55,18 @@
 
 #pragma mark -- STTabbarControllerDelegate
 
-- (BOOL)STTabbarController:(STTabbarController *)tabbarController ShouldChangeSelectIndex:(NSInteger)selectIndex {
+- (BOOL)STTabbarController:(STTabbarController *)tabbarController shouldChangeSelectIndex:(NSInteger)selectIndex {
     if (selectIndex == 2) {
         return NO;
     }
     return YES;
 }
 
-- (void)STTabbarController:(STTabbarController *)tabbarController DidChangeSelectIndex:(NSInteger)selectIndex {
+- (void)STTabbarController:(STTabbarController *)tabbarController didChangeSelectIndex:(NSInteger)selectIndex {
     NSLog(@"————%s——--",_cmd);
 }
 
-- (void)STTabbarController:(STTabbarController *)tabbarController WillChangeSelectIndex:(NSInteger)selectIndex {
+- (void)STTabbarController:(STTabbarController *)tabbarController willChangeSelectIndex:(NSInteger)selectIndex {
     NSLog(@"————%s——--",_cmd);
 }
 

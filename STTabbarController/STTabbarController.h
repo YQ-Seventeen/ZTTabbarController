@@ -8,12 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "STTabbarItemModel.h"
 #import "STTabbarItemAttribute.h"
+#import "STTabbarConstant.h"
 @class STTabbarController;
 @protocol STTabbarControllerDelegate <NSObject>
 @optional
-- (void)STTabbarController:(STTabbarController *)tabbarController WillChangeSelectIndex:(NSInteger)selectIndex;
-- (void)STTabbarController:(STTabbarController *)tabbarController DidChangeSelectIndex:(NSInteger)selectIndex;
-- (BOOL)STTabbarController:(STTabbarController *)tabbarController ShouldChangeSelectIndex:(NSInteger)selectIndex;
+- (void)STTabbarController:(STTabbarController *)tabbarController willChangeSelectIndex:(NSInteger)selectIndex;
+- (void)STTabbarController:(STTabbarController *)tabbarController didChangeSelectIndex:(NSInteger)selectIndex;
+- (BOOL)STTabbarController:(STTabbarController *)tabbarController shouldChangeSelectIndex:(NSInteger)selectIndex;
 @end
 @interface STTabbarController : UIViewController
 // the rectEdge is type of 'UIRectEdge' you can set this property to modify all ChildViewController's 'edgesForExtendedLayout' property. default is 'UIRectEdgeAll'
@@ -63,3 +64,10 @@
 
 - (void)setTabbarHidden:(BOOL)hidden;
 @end
+
+
+@interface UIViewController (STTabbarController)
+@property (strong, nonatomic) STTabbarController *st_tabbar;
+@property (assign, nonatomic) BOOL hidesTabbarWhenPushed;
+@end
+

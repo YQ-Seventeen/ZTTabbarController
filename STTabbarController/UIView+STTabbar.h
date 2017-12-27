@@ -6,7 +6,6 @@
 //  Copyright © 2017年 Suning. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-@class STTabbarController;
 @interface UIView (STTabbar)
 @property (assign, nonatomic) CGFloat st_x;
 @property (assign, nonatomic) CGFloat st_y;

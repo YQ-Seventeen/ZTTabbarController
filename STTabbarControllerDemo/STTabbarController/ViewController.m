@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIViewController+STTabbarController.h"
+#import <STTabbarController/STTabbarController.h>
 @interface ViewController ()<UITabBarControllerDelegate>
 
 @end
