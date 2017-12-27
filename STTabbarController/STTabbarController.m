@@ -160,18 +160,18 @@
     NSNumber *argument    = notif.object;
     NSInteger selectIndex = argument.integerValue;
     BOOL isSkip           = NO;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:ShouldChangeSelectIndex:)]) {
-        isSkip = ![self.delegate STTabbarController:self ShouldChangeSelectIndex:selectIndex];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:shouldChangeSelectIndex:)]) {
+        isSkip = ![self.delegate STTabbarController:self shouldChangeSelectIndex:selectIndex];
     }
     if (isSkip) {
         return;
     }
-    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:WillChangeSelectIndex:)]) {
-        [self.delegate STTabbarController:self WillChangeSelectIndex:selectIndex];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:willChangeSelectIndex:)]) {
+        [self.delegate STTabbarController:self willChangeSelectIndex:selectIndex];
     }
     self.selectIndex = argument.integerValue;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:DidChangeSelectIndex:)]) {
-        [self.delegate STTabbarController:self DidChangeSelectIndex:selectIndex];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(STTabbarController:didChangeSelectIndex:)]) {
+        [self.delegate STTabbarController:self didChangeSelectIndex:selectIndex];
     }
 }
 #pragma mark-- public Methods
