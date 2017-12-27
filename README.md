@@ -72,7 +72,7 @@ this class is design to change item behavior by user
 
 ```
 
-####For more usage of STTabbarController, see demo in the project 
+#### For more usage of STTabbarController, see demo in the project 
 
 ## Requirements
 
