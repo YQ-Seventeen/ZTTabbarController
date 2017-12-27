@@ -11,4 +11,5 @@
 @property (weak, nonatomic) NSArray<STTabbarItemModel *> *items;
 @property (weak, nonatomic) NSArray *itemAttributes;
 @property (assign, nonatomic) NSInteger selectIndex;
+@property (strong, nonatomic) UIColor * bgColor;
 @end

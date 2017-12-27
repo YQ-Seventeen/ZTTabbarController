@@ -8,9 +8,9 @@
 #import "STTabbarController.h"
 #import "STTabbar.h"
 #import "UIView+STTabbar.h"
-#import "UIViewController+STTabbarController.h"
+#import "STTabbarConstant.h"
+#import <objc/runtime.h>
 #define MAX_ITEM_COUNT 5
-#define TABBAR_SYSTEM_HEIGHT 49.0f
 @interface STTabbarController ()
 @end
 @implementation STTabbarController {
@@ -70,7 +70,7 @@
     self.itemAttributeAppearce = [STTabbarItemAttribute defaultAttribute];
     self.rectEdge              = UIRectEdgeNone;
 }
-- (void)dalayInitialization {
+- (void)setup_afterSetChildVC {
     _tabbarHiddenY  = self.view.st_h;
     _tabbarDisplayY = self.view.st_h - _tabbar.st_h;
     //set childViewControllers edgesForExtendedLayout
@@ -85,6 +85,10 @@
         }
     }
     [self makeChildRelateRootTabbarController];
+    
+    
+    //check items title if not exist then use childViewController's title if it exists
+    [self checkItemsTitle];
 }
 - (void)makeChildRelateRootTabbarController {
     [self.childViewControllers makeObjectsPerformSelector:@selector(setSt_tabbar:) withObject:self];
@@ -95,6 +99,20 @@
         }
     }];
 }
+
+- (void)checkItemsTitle {
+    for (STTabbarItemModel * itemModel in _tabbar.items) {
+        NSInteger index = [_tabbar.items indexOfObject:itemModel];
+        UIViewController * vc = self.childViewControllers[index];
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = [(UINavigationController *)vc topViewController];
+        }
+        if (STR_IS_EMPTY(itemModel.title) && !STR_IS_EMPTY(vc.title)) {
+            itemModel.title = vc.title;
+        }
+    }
+}
+
 - (void)setupTabbar {
     if (!_items || !_items.count || _items.count > MAX_ITEM_COUNT) {
         NSAssert(NO, @"error");
@@ -105,7 +123,7 @@
     NSAssert([self checkAttribute], @"attribute error");
     [self generateAttributes];
     float tabbarW    = self.view.st_w;
-    float tabbarH    = TABBAR_SYSTEM_HEIGHT;
+    float tabbarH    = STTabbarDefaultHeight;
     float tabbarX    = 0;
     float tabbarY    = self.view.st_maxY - tabbarH;
     STTabbar *tabbar = [[STTabbar alloc] initWithFrame:CGRectMake(tabbarX, tabbarY, tabbarW, tabbarH)];
@@ -133,7 +151,7 @@
         self.itemsAttributes = temp;
     }
 }
-#define ST_NAVAGATIO
+
 - (void)updateContentFrame {
     _topViewController.view.frame = CGRectMake(0, 0, self.view.st_w, self.view.st_h);
 }
@@ -157,6 +175,14 @@
     }
 }
 #pragma mark-- public Methods
+
+- (void)setBackgroundViewColor:(UIColor *)backgroundViewColor {
+    if (backgroundViewColor && _backgroundViewColor != backgroundViewColor) {
+        _backgroundViewColor = backgroundViewColor;
+        _tabbar.backgroundColor = backgroundViewColor;
+    }
+}
+
 - (void)setItems:(NSArray<__kindof STTabbarItemModel *> *)items {
     if (_items != items) {
         _items = items;
@@ -171,7 +197,7 @@
     if (self.items.count > 0 && !_tabbar) {
         [self setupTabbar];
     }
-    [self dalayInitialization];
+    [self setup_afterSetChildVC];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
     _selectIndex = selectIndex;
@@ -190,6 +216,7 @@
     }
     _tabbar.selectIndex = selectIndex;
 }
+
 - (void)setTabbarHidden:(BOOL)hidden animated:(BOOL)animated {
     float afterHeight = _tabbarDisplayY;
     if (hidden) {
@@ -222,5 +249,41 @@
     if (itemsAttributes) {
         _itemsAttributes = itemsAttributes;
     }
+}
+@end
+
+
+@implementation UIViewController (STTabbarController)
+
+- (void)setSt_tabbar:(STTabbarController *)st_tabbar {
+    if (st_tabbar) {
+        SEL storeKey = @selector(st_tabbar);
+        objc_setAssociatedObject(self, storeKey, st_tabbar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+- (STTabbarController *)st_tabbar {
+    STTabbarController * tabbarController = objc_getAssociatedObject(self, _cmd);
+    if (tabbarController) {
+        return tabbarController;
+    }
+    else{
+        if (self.navigationController) {
+            return self.navigationController.st_tabbar;
+        }
+        else if(self.presentingViewController){
+            return self.presentingViewController.st_tabbar;
+        }
+        else{
+            return nil;
+        }
+    }
+}
+- (void)setHidesTabbarWhenPushed:(BOOL)hidesTabbarWhenPushed {
+    SEL storeKey = @selector(hidesTabbarWhenPushed);
+    objc_setAssociatedObject(self, storeKey, @(hidesTabbarWhenPushed), OBJC_ASSOCIATION_ASSIGN);
+}
+- (BOOL)hidesTabbarWhenPushed {
+    NSNumber *hidesTabbarWhenPushed = objc_getAssociatedObject(self, _cmd);
+    return hidesTabbarWhenPushed.boolValue;
 }
 @end

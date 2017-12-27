@@ -1,1 +1,1 @@
-../../../STTabbarController/STTabbarController/STTabbarItemAttribute.h
+../../../../STTabbarController/STTabbarItemAttribute.h

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController4.h"
-#import "UIViewController+STTabbarController.h"
+#import <STTabbarController/STTabbarController.h>
 #import "ViewController.h"
 @interface ViewController4 ()
 
@@ -33,6 +33,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     ViewController * vc = [[ViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+    [self.st_tabbar setTabbarHidden:YES];
 }
 /*
 #pragma mark - Navigation

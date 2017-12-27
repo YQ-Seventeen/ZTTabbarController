@@ -1,1 +1,1 @@
-../../../STTabbarController/STTabbarController/STTabbar.h
+../../../../STTabbarController/STTabbar.h

@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Suning. All rights reserved.
 //
 #import "UIView+STTabbar.h"
+#import <objc/runtime.h>
+
 @implementation UIView (STTabbar)
 - (void)setSt_x:(CGFloat)st_x {
     CGRect selfRect = self.frame;
@@ -55,4 +57,5 @@
 - (CGFloat)st_maxY {
     return CGRectGetMaxY(self.frame);
 }
+
 @end

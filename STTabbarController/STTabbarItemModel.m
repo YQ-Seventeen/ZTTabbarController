@@ -7,6 +7,7 @@
 //
 #import "STTabbarItemModel.h"
 #import "UIView+STTabbar.h"
+#import "STTabbarConstant.h"
 @implementation STTabbarItemModel
 - (instancetype)initWithNormalImageName:(NSString *)normalImageName andSelectImageName:(NSString *)selectImageName andTitle:(NSString *)title {
     self = [super init];
@@ -18,6 +19,6 @@
     return self;
 }
 - (BOOL)isModelValidate {
-    return self.normalImageName.length > 0;
+    return !STR_IS_EMPTY(self.normalImageName);
 }
 @end

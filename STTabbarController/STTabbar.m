@@ -8,13 +8,14 @@
 #import "STTabbar.h"
 #import "STTabbarItem.h"
 #import "UIView+STTabbar.h"
+#import "STTabbarConstant.h"
 @implementation STTabbar {
-    NSArray<STTabbarItem *> *_tabbarItem;
+    NSArray<STTabbarItem *> *_tabbarItems;
 }
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor lightGrayColor];
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -26,7 +27,7 @@
 }
 - (void)setupTabbar {
     CGFloat w            = self.st_w / _items.count;
-    CGFloat h            = self.st_h;
+    CGFloat h            = STTabbarContentHeight;
     NSMutableArray *temp = [NSMutableArray new];
     for (NSInteger i = 0, max = self.items.count; i < max; ++i) {
         STTabbarItem *tabbarItem = [[STTabbarItem alloc] init];
@@ -39,10 +40,10 @@
         [self insertSubview:tabbarItem atIndex:0];
         [temp addObject:tabbarItem];
     }
-    _tabbarItem = temp;
+    _tabbarItems = temp;
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
-    NSArray *items = self->_tabbarItem;
+    NSArray *items = self->_tabbarItems;
     for (STTabbarItem *item in items) {
         NSInteger index = [items indexOfObject:item];
         if (index == selectIndex) {

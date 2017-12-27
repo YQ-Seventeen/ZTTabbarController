@@ -15,4 +15,5 @@
 @property (assign, nonatomic) CGFloat st_centerY;
 @property (assign, nonatomic, readonly) CGFloat st_maxX;
 @property (assign, nonatomic, readonly) CGFloat st_maxY;
+
 @end
