@@ -7,8 +7,6 @@
 * Supports iPad and iPhone
 * Can be used inside UINavigationController
 
-# todo list
-
 
 ## Installation
 
