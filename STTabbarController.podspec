@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "STTabBarController"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "STTabbarController is a highly customizable TabbarController！"
   s.description  = "TabbarController CustomTabbarController Tabbar customizable STTabbarController."
   s.homepage     = "https://github.com/YQ-Seventeen/STTabbarController.git"
