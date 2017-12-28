@@ -1,0 +1,16 @@
+PODS:
+  - ZTTabbarController (0.0.1)
+
+DEPENDENCIES:
+  - ZTTabbarController (from `../ZTTabbarController`)
+
+EXTERNAL SOURCES:
+  ZTTabbarController:
+    :path: ../ZTTabbarController
+
+SPEC CHECKSUMS:
+  ZTTabbarController: b621dc9118692144ec20280217527eef0a0efb86
+
+PODFILE CHECKSUM: 38dc78decc912997d0c2099583c32b8984b774e6
+
+COCOAPODS: 1.4.0.rc.1

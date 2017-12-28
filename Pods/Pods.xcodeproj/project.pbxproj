@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0556F12EBDACDAAE3B34A229279AECEE /* UIView+ZTTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = BB0465B25838BD3006A4FB01D2E69949 /* UIView+ZTTabbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0B61925F45FC7DC4269D96DAA45BA1DF /* ZTTabbarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D327D365C56462BD74BB75090B55DB52 /* ZTTabbarController-dummy.m */; };
+		328A2323A6FB665A040681DE8181BF62 /* ZTTabbarItemModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FD75E5B9B0DDEBE6828F2DE46A86AD57 /* ZTTabbarItemModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A2AD0FB3CCD0C1EC98261D6E3507EA2 /* ZTTabbarConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F8C2BB1BD2817F3E6D4F45625E4A806 /* ZTTabbarConstant.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4692D949375479F99BB0B38784838D70 /* ZTTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681B419692943B60D516FEBE0EF854A /* ZTTabbar.m */; };
+		4B55C09227F540388D206DB197A70AD6 /* ZTTabbarItemAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = BE26B68BA84D38BD2961E4F6725DA2D1 /* ZTTabbarItemAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4D728BCF850DE146F61C7238BA2C505F /* ZTTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 692AD6E08D797FE94F44D6BC629E30CE /* ZTTabbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		703BDE69B784947FE536A2F69E0A6011 /* ZTTabbarItemAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 14923951DAC5CE6B4C0A95096A058B26 /* ZTTabbarItemAttribute.m */; };
+		827FFCBF42A4605AC80D4B664AFBE677 /* ZTTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8ADF94140A9B9DD71B7DC815A68DB89 /* ZTTabbarController.m */; };
+		8A75A0964FDDBF33FE948786E252EE24 /* UIView+ZTTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CFC24FD40C3402BFEC70C7CF1889B2 /* UIView+ZTTabbar.m */; };
+		9DC9496E24C40AA4B705DA530C7544B3 /* ZTTabbarItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D3F4A5CB8AE1ED20ABFE4D8E71A7FC /* ZTTabbarItemModel.m */; };
+		A8A76A6D26A34FFAF0D99A36979B42D6 /* ZTTabbarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DA80786797F5BDE4E880D1838D8190B /* ZTTabbarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B0A01F53AA7A6AE5097C08C3FCB5DC85 /* ZTTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B617430048523EF8E6F4DFF97A31A6CF /* ZTTabbarItem.m */; };
+		D9E6D044536F7E17A9A09626A0EA7DD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		DFB2F64EF80F3D22596D8439B84CD1F5 /* Pods-ZTTabbarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6880E8FDEC957628E312BE2388A101 /* Pods-ZTTabbarController-dummy.m */; };
+		E64AA8EB3D1EA122F75D292E64B5EBA0 /* ZTTabbarConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 010E47B03C2D759B0B70F8A3C313B019 /* ZTTabbarConstant.m */; };
+		E64F750E7FFD9C88C4BF2D032F58474D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		F175F149BBA5E7DC35AD0692BE92EB6B /* ZTTabbarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B39730EF5F2D9E1774E99C6A49D5A1EB /* ZTTabbarItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F77CFD843284B7A22FF6A173BC158967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372EB633BF747CA60400449651C01536 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 784FAB28964F5D430C07F09FB1C98884;
+			remoteInfo = ZTTabbarController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010E47B03C2D759B0B70F8A3C313B019 /* ZTTabbarConstant.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbarConstant.m; path = ZTTabbarController/ZTTabbarConstant.m; sourceTree = "<group>"; };
+		0D6880E8FDEC957628E312BE2388A101 /* Pods-ZTTabbarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZTTabbarController-dummy.m"; sourceTree = "<group>"; };
+		14923951DAC5CE6B4C0A95096A058B26 /* ZTTabbarItemAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbarItemAttribute.m; path = ZTTabbarController/ZTTabbarItemAttribute.m; sourceTree = "<group>"; };
+		1AD83FA68893C2792E3048D3395BBF3D /* Pods-ZTTabbarController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZTTabbarController-acknowledgements.plist"; sourceTree = "<group>"; };
+		1B63F8229E8EAA62217332586C2C95C2 /* Pods-ZTTabbarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZTTabbarController.debug.xcconfig"; sourceTree = "<group>"; };
+		1D47842BE7BBB9C558A33A7AF8951086 /* Pods-ZTTabbarController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZTTabbarController-resources.sh"; sourceTree = "<group>"; };
+		1F8C2BB1BD2817F3E6D4F45625E4A806 /* ZTTabbarConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbarConstant.h; path = ZTTabbarController/ZTTabbarConstant.h; sourceTree = "<group>"; };
+		24CFC24FD40C3402BFEC70C7CF1889B2 /* UIView+ZTTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZTTabbar.m"; path = "ZTTabbarController/UIView+ZTTabbar.m"; sourceTree = "<group>"; };
+		2749081E337D95283599ABAF4B59CE33 /* libPods-ZTTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZTTabbarController.a"; path = "libPods-ZTTabbarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA80786797F5BDE4E880D1838D8190B /* ZTTabbarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbarController.h; path = ZTTabbarController/ZTTabbarController.h; sourceTree = "<group>"; };
+		4C33E29B65617124312E1FD21E7414C8 /* ZTTabbarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZTTabbarController-prefix.pch"; sourceTree = "<group>"; };
+		4D1963C6E43D6F77C17F53DD435E1660 /* Pods-ZTTabbarController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZTTabbarController-frameworks.sh"; sourceTree = "<group>"; };
+		64D0329208867F0D097277B87DD905B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6681B419692943B60D516FEBE0EF854A /* ZTTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbar.m; path = ZTTabbarController/ZTTabbar.m; sourceTree = "<group>"; };
+		66FD0C6D006FAD79A92D1138F11B9B1F /* Pods-ZTTabbarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZTTabbarController.release.xcconfig"; sourceTree = "<group>"; };
+		692AD6E08D797FE94F44D6BC629E30CE /* ZTTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbar.h; path = ZTTabbarController/ZTTabbar.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A62EB395EDF20964EADEEAEF3A2C39C9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A67136A92FAB753E9A186F94CD33AB91 /* ZTTabbarController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZTTabbarController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B39730EF5F2D9E1774E99C6A49D5A1EB /* ZTTabbarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbarItem.h; path = ZTTabbarController/ZTTabbarItem.h; sourceTree = "<group>"; };
+		B4EC2B208E79CBA7AE114ABC28B36561 /* Pods-ZTTabbarController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZTTabbarController-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B617430048523EF8E6F4DFF97A31A6CF /* ZTTabbarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbarItem.m; path = ZTTabbarController/ZTTabbarItem.m; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BB0465B25838BD3006A4FB01D2E69949 /* UIView+ZTTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZTTabbar.h"; path = "ZTTabbarController/UIView+ZTTabbar.h"; sourceTree = "<group>"; };
+		BE26B68BA84D38BD2961E4F6725DA2D1 /* ZTTabbarItemAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbarItemAttribute.h; path = ZTTabbarController/ZTTabbarItemAttribute.h; sourceTree = "<group>"; };
+		C1D3F4A5CB8AE1ED20ABFE4D8E71A7FC /* ZTTabbarItemModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbarItemModel.m; path = ZTTabbarController/ZTTabbarItemModel.m; sourceTree = "<group>"; };
+		C623FD5BA0A9F3D126416FCDF9DEC66C /* libZTTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libZTTabbarController.a; path = libZTTabbarController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D327D365C56462BD74BB75090B55DB52 /* ZTTabbarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZTTabbarController-dummy.m"; sourceTree = "<group>"; };
+		D8630367A376C97AE0ADE3345B59531D /* ZTTabbarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZTTabbarController.xcconfig; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D8ADF94140A9B9DD71B7DC815A68DB89 /* ZTTabbarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZTTabbarController.m; path = ZTTabbarController/ZTTabbarController.m; sourceTree = "<group>"; };
+		FD75E5B9B0DDEBE6828F2DE46A86AD57 /* ZTTabbarItemModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZTTabbarItemModel.h; path = ZTTabbarController/ZTTabbarItemModel.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8483DE4677036879F4EB5DC4736128A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77CFD843284B7A22FF6A173BC158967 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86318DE2560BE2B0EA8F82F756BF56F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E64F750E7FFD9C88C4BF2D032F58474D /* Foundation.framework in Frameworks */,
+				D9E6D044536F7E17A9A09626A0EA7DD4 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10A1EC682CD6ADBBBCB7C4C1DAFA3148 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8630367A376C97AE0ADE3345B59531D /* ZTTabbarController.xcconfig */,
+				D327D365C56462BD74BB75090B55DB52 /* ZTTabbarController-dummy.m */,
+				4C33E29B65617124312E1FD21E7414C8 /* ZTTabbarController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/ZTTabbarController";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		451A50070416EB8B48A9272060329471 /* Pods-ZTTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				B4EC2B208E79CBA7AE114ABC28B36561 /* Pods-ZTTabbarController-acknowledgements.markdown */,
+				1AD83FA68893C2792E3048D3395BBF3D /* Pods-ZTTabbarController-acknowledgements.plist */,
+				0D6880E8FDEC957628E312BE2388A101 /* Pods-ZTTabbarController-dummy.m */,
+				4D1963C6E43D6F77C17F53DD435E1660 /* Pods-ZTTabbarController-frameworks.sh */,
+				1D47842BE7BBB9C558A33A7AF8951086 /* Pods-ZTTabbarController-resources.sh */,
+				1B63F8229E8EAA62217332586C2C95C2 /* Pods-ZTTabbarController.debug.xcconfig */,
+				66FD0C6D006FAD79A92D1138F11B9B1F /* Pods-ZTTabbarController.release.xcconfig */,
+			);
+			name = "Pods-ZTTabbarController";
+			path = "Target Support Files/Pods-ZTTabbarController";
+			sourceTree = "<group>";
+		};
+		4581CD8EC4F2363EE67C28EC2C0670E1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				451A50070416EB8B48A9272060329471 /* Pods-ZTTabbarController */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6AE5E8F4A0BCD716FD77921E0D395880 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A62EB395EDF20964EADEEAEF3A2C39C9 /* LICENSE */,
+				64D0329208867F0D097277B87DD905B6 /* README.md */,
+				A67136A92FAB753E9A186F94CD33AB91 /* ZTTabbarController.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				82C64036A113557C7F6533D40A68F53F /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				94C8B2D428009409D99B14C2EC0F3AD5 /* Products */,
+				4581CD8EC4F2363EE67C28EC2C0670E1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		82C64036A113557C7F6533D40A68F53F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92C0A7A164E2719940D002C48A059B4B /* ZTTabbarController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		92C0A7A164E2719940D002C48A059B4B /* ZTTabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				BB0465B25838BD3006A4FB01D2E69949 /* UIView+ZTTabbar.h */,
+				24CFC24FD40C3402BFEC70C7CF1889B2 /* UIView+ZTTabbar.m */,
+				692AD6E08D797FE94F44D6BC629E30CE /* ZTTabbar.h */,
+				6681B419692943B60D516FEBE0EF854A /* ZTTabbar.m */,
+				1F8C2BB1BD2817F3E6D4F45625E4A806 /* ZTTabbarConstant.h */,
+				010E47B03C2D759B0B70F8A3C313B019 /* ZTTabbarConstant.m */,
+				3DA80786797F5BDE4E880D1838D8190B /* ZTTabbarController.h */,
+				D8ADF94140A9B9DD71B7DC815A68DB89 /* ZTTabbarController.m */,
+				B39730EF5F2D9E1774E99C6A49D5A1EB /* ZTTabbarItem.h */,
+				B617430048523EF8E6F4DFF97A31A6CF /* ZTTabbarItem.m */,
+				BE26B68BA84D38BD2961E4F6725DA2D1 /* ZTTabbarItemAttribute.h */,
+				14923951DAC5CE6B4C0A95096A058B26 /* ZTTabbarItemAttribute.m */,
+				FD75E5B9B0DDEBE6828F2DE46A86AD57 /* ZTTabbarItemModel.h */,
+				C1D3F4A5CB8AE1ED20ABFE4D8E71A7FC /* ZTTabbarItemModel.m */,
+				6AE5E8F4A0BCD716FD77921E0D395880 /* Pod */,
+				10A1EC682CD6ADBBBCB7C4C1DAFA3148 /* Support Files */,
+			);
+			name = ZTTabbarController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		94C8B2D428009409D99B14C2EC0F3AD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2749081E337D95283599ABAF4B59CE33 /* libPods-ZTTabbarController.a */,
+				C623FD5BA0A9F3D126416FCDF9DEC66C /* libZTTabbarController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E03E639F0D980F795A6AD4614EBA029 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0556F12EBDACDAAE3B34A229279AECEE /* UIView+ZTTabbar.h in Headers */,
+				4D728BCF850DE146F61C7238BA2C505F /* ZTTabbar.h in Headers */,
+				3A2AD0FB3CCD0C1EC98261D6E3507EA2 /* ZTTabbarConstant.h in Headers */,
+				A8A76A6D26A34FFAF0D99A36979B42D6 /* ZTTabbarController.h in Headers */,
+				F175F149BBA5E7DC35AD0692BE92EB6B /* ZTTabbarItem.h in Headers */,
+				4B55C09227F540388D206DB197A70AD6 /* ZTTabbarItemAttribute.h in Headers */,
+				328A2323A6FB665A040681DE8181BF62 /* ZTTabbarItemModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		62B2D01183E4562B4885305F28FABEA2 /* Pods-ZTTabbarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89111FE4669E1C00F5A7E5E74AF62B75 /* Build configuration list for PBXNativeTarget "Pods-ZTTabbarController" */;
+			buildPhases = (
+				82C67C1D6F5E63D473BF28C3D0DBAB0F /* Sources */,
+				8483DE4677036879F4EB5DC4736128A7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				063D9DEB342C9B40CAAC5EBD42B38C3F /* PBXTargetDependency */,
+			);
+			name = "Pods-ZTTabbarController";
+			productName = "Pods-ZTTabbarController";
+			productReference = 2749081E337D95283599ABAF4B59CE33 /* libPods-ZTTabbarController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		784FAB28964F5D430C07F09FB1C98884 /* ZTTabbarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C1790901C08332D4075888C5BA8C0F7 /* Build configuration list for PBXNativeTarget "ZTTabbarController" */;
+			buildPhases = (
+				D7A4B1E6FBAA094D2CFBA9CBD5C6273E /* Sources */,
+				86318DE2560BE2B0EA8F82F756BF56F0 /* Frameworks */,
+				3E03E639F0D980F795A6AD4614EBA029 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZTTabbarController;
+			productName = ZTTabbarController;
+			productReference = C623FD5BA0A9F3D126416FCDF9DEC66C /* libZTTabbarController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 94C8B2D428009409D99B14C2EC0F3AD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62B2D01183E4562B4885305F28FABEA2 /* Pods-ZTTabbarController */,
+				784FAB28964F5D430C07F09FB1C98884 /* ZTTabbarController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82C67C1D6F5E63D473BF28C3D0DBAB0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB2F64EF80F3D22596D8439B84CD1F5 /* Pods-ZTTabbarController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7A4B1E6FBAA094D2CFBA9CBD5C6273E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A75A0964FDDBF33FE948786E252EE24 /* UIView+ZTTabbar.m in Sources */,
+				4692D949375479F99BB0B38784838D70 /* ZTTabbar.m in Sources */,
+				E64AA8EB3D1EA122F75D292E64B5EBA0 /* ZTTabbarConstant.m in Sources */,
+				0B61925F45FC7DC4269D96DAA45BA1DF /* ZTTabbarController-dummy.m in Sources */,
+				827FFCBF42A4605AC80D4B664AFBE677 /* ZTTabbarController.m in Sources */,
+				B0A01F53AA7A6AE5097C08C3FCB5DC85 /* ZTTabbarItem.m in Sources */,
+				703BDE69B784947FE536A2F69E0A6011 /* ZTTabbarItemAttribute.m in Sources */,
+				9DC9496E24C40AA4B705DA530C7544B3 /* ZTTabbarItemModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		063D9DEB342C9B40CAAC5EBD42B38C3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZTTabbarController;
+			target = 784FAB28964F5D430C07F09FB1C98884 /* ZTTabbarController */;
+			targetProxy = 372EB633BF747CA60400449651C01536 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A698E5AD6E1ABE8B84ABD69984A224B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B63F8229E8EAA62217332586C2C95C2 /* Pods-ZTTabbarController.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B8598E95431B27E0054303D93240CE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FD0C6D006FAD79A92D1138F11B9B1F /* Pods-ZTTabbarController.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D122E40BD88A3FD77F390D8AB4C5EEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8630367A376C97AE0ADE3345B59531D /* ZTTabbarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZTTabbarController/ZTTabbarController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8CA0698D92A4B3E8F1B8C51FCB21E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8630367A376C97AE0ADE3345B59531D /* ZTTabbarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZTTabbarController/ZTTabbarController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C1790901C08332D4075888C5BA8C0F7 /* Build configuration list for PBXNativeTarget "ZTTabbarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D122E40BD88A3FD77F390D8AB4C5EEBA /* Debug */,
+				D8CA0698D92A4B3E8F1B8C51FCB21E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
+				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89111FE4669E1C00F5A7E5E74AF62B75 /* Build configuration list for PBXNativeTarget "Pods-ZTTabbarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A698E5AD6E1ABE8B84ABD69984A224B /* Debug */,
+				B8598E95431B27E0054303D93240CE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
