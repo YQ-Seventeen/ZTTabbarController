@@ -5,6 +5,7 @@
 [![iPhone screenshot](Screenshots/iphone.png)](Screenshots/iPhone.png)
 
 * Supports iPad and iPhone
+* Supports landscape and portrait orientations
 * Can be used inside UINavigationController
 
 
@@ -66,9 +67,9 @@ this class is design to change item behavior by user
 
 #### STTabbarControllerDelegate
 ```objective-c
-- (void)STTabbarController:(STTabbarController *)tabbarController WillChangeSelectIndex:(NSInteger)selectIndex;
-- (void)STTabbarController:(STTabbarController *)tabbarController DidChangeSelectIndex:(NSInteger)selectIndex;
-- (BOOL)STTabbarController:(STTabbarController *)tabbarController ShouldChangeSelectIndex:(NSInteger)selectIndex;
+- (void)STTabbarController:(STTabbarController *)tabbarController willChangeSelectIndex:(NSInteger)selectIndex;
+- (void)STTabbarController:(STTabbarController *)tabbarController didChangeSelectIndex:(NSInteger)selectIndex;
+- (BOOL)STTabbarController:(STTabbarController *)tabbarController shouldChangeSelectIndex:(NSInteger)selectIndex;
 
 ```
 
