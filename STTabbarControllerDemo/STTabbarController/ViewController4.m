@@ -33,7 +33,13 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     ViewController * vc = [[ViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-    [self.st_tabbar setTabbarHidden:YES];
+    [self.st_tabbar setTabbarHidden:YES animated:YES];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.st_tabbar setTabbarHidden:NO animated:YES];
 }
 /*
 #pragma mark - Navigation

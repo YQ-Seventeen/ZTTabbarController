@@ -9,7 +9,9 @@
 #import <STTabbarController/STTabbarController.h>
 @interface ViewController2 () <UITableViewDelegate, UITableViewDataSource>
 @end
-@implementation ViewController2
+@implementation ViewController2 {
+    UITableView * _tabview;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title                = @"我是tab2";
@@ -17,11 +19,19 @@
     // Do any additional setup after loading the view.
     BOOL isPhoneX = ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
     float tabbarDefaultHeight = isPhoneX ? 83 : 49;
-    UITableView *tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), [UIScreen mainScreen].bounds.size.height - self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height - tabbarDefaultHeight) style:UITableViewStylePlain];
+    UITableView *tabView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), [UIScreen mainScreen].bounds.size.height - tabbarDefaultHeight) style:UITableViewStylePlain];
     tabView.delegate   = self;
     tabView.dataSource = self;
     [self.view addSubview:tabView];
+    _tabview = tabView;
 }
+
+- (void)viewWillLayoutSubviews {
+    BOOL isPhoneX = ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
+    float tabbarDefaultHeight = isPhoneX ? 83 : 49;
+    _tabview.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)  - tabbarDefaultHeight);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

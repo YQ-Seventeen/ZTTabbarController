@@ -62,8 +62,37 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 - (void)viewWillLayoutSubviews {
+    _tabbarHiddenY  = self.view.st_h;
+    _tabbarDisplayY = self.view.st_h - _tabbar.st_h;
+    [self updateContentFrame];
+    [self updateTabbar];
 }
+
+#pragma mark  -- Horizontal vertical screen
+- (BOOL)shouldAutorotate {
+    return [[self displayViewController]shouldAutorotate];
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+
+    return [[self displayViewController]supportedInterfaceOrientations];
+}
+
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return [[self displayViewController]preferredInterfaceOrientationForPresentation];
+}
+
+- (UIViewController *)displayViewController {
+    UIViewController * displayVC = [self.childViewControllers objectAtIndex:self.selectIndex];
+    if ([displayVC isKindOfClass:[UINavigationController class]]) {
+        displayVC = [((UINavigationController *)displayVC) topViewController];
+    }
+    return displayVC;
+}
+
 #pragma mark-- setup
 - (void)initialization {
     self.view.backgroundColor  = [UIColor whiteColor];
@@ -71,8 +100,6 @@
     self.rectEdge              = UIRectEdgeNone;
 }
 - (void)setup_afterSetChildVC {
-    _tabbarHiddenY  = self.view.st_h;
-    _tabbarDisplayY = self.view.st_h - _tabbar.st_h;
     //set childViewControllers edgesForExtendedLayout
     if (self.rectEdge != UIRectEdgeAll) {
         for (UIViewController *childVC in self.childViewControllers) {
@@ -122,17 +149,39 @@
     }
     NSAssert([self checkAttribute], @"attribute error");
     [self generateAttributes];
+    [self createTabbar];
+    self.selectIndex      = 0;
+}
+
+- (void)createTabbar {
+    if (_tabbar) {
+        [self updateTabbar];
+    }
+    else{
+        float tabbarW    = self.view.st_w;
+        float tabbarH    = STTabbarDefaultHeight;
+        float tabbarX    = 0;
+        float tabbarY    = self.view.st_maxY - tabbarH;
+        STTabbar *tabbar = [[STTabbar alloc] initWithFrame:CGRectMake(tabbarX, tabbarY, tabbarW, tabbarH)];
+        [self.view addSubview:tabbar];
+        _tabbar               = tabbar;
+        tabbar.itemAttributes = self.itemsAttributes;
+        tabbar.items          = _items;
+    }
+}
+
+- (void)updateTabbar {
+    if (!_tabbar) {
+        [self createTabbar];
+        return;
+    }
     float tabbarW    = self.view.st_w;
     float tabbarH    = STTabbarDefaultHeight;
     float tabbarX    = 0;
     float tabbarY    = self.view.st_maxY - tabbarH;
-    STTabbar *tabbar = [[STTabbar alloc] initWithFrame:CGRectMake(tabbarX, tabbarY, tabbarW, tabbarH)];
-    [self.view addSubview:tabbar];
-    _tabbar               = tabbar;
-    tabbar.itemAttributes = self.itemsAttributes;
-    tabbar.items          = _items;
-    self.selectIndex      = 0;
+    _tabbar.frame = (CGRect){tabbarX,tabbarY,tabbarW,tabbarH};
 }
+
 - (BOOL)checkAttribute {
     if (self.itemsAttributes && self.itemsAttributes.count < _items.count) {
         return NO;
@@ -153,7 +202,11 @@
 }
 
 - (void)updateContentFrame {
-    _topViewController.view.frame = CGRectMake(0, 0, self.view.st_w, self.view.st_h);
+    UIViewController * displayVC = [self displayViewController];
+    if(displayVC.navigationController){
+        displayVC.navigationController.view.frame = CGRectMake(0, 0, self.view.st_w, self.view.st_h);
+    }
+    displayVC.view.frame = CGRectMake(0, 0, self.view.st_w, self.view.st_h);
 }
 #pragma mark-- Notification CallBack
 - (void)clickTabbarItemAction:(NSNotification *)notif {
@@ -200,6 +253,9 @@
     [self setup_afterSetChildVC];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
+    if(_selectIndex  == selectIndex) {
+        return;
+    }
     _selectIndex = selectIndex;
     if (_topViewController) {
         [_topViewController willMoveToParentViewController:nil];
