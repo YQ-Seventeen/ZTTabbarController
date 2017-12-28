@@ -253,7 +253,7 @@
     [self setup_afterSetChildVC];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
-    if(_selectIndex  == selectIndex) {
+    if(_selectIndex  == selectIndex && _topViewController) {
         return;
     }
     _selectIndex = selectIndex;

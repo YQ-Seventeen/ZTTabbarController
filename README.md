@@ -1,10 +1,10 @@
 # ZTTabBarController
 
-[![iPad screenshot](Screenshots/ipad.png)](Screenshots/iPhone.png)
+[![iPad screenshot](Screenshots/iphone.gif)](Screenshots/iphone.png)
 
-[![iPhone screenshot](Screenshots/iphone.png)](Screenshots/iPhone.png)
 
 * Supports iPad and iPhone
+* Supports iphone X 
 * Supports landscape and portrait orientations
 * Can be used inside UINavigationController
 
