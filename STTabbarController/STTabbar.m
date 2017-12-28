@@ -19,6 +19,15 @@
     }
     return self;
 }
+
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    if (_tabbarItems.count) {
+        [self updateTabbarItemFrame];
+    }
+}
+
 - (void)setItems:(NSArray<STTabbarItemModel *> *)items {
     if (_items != items) {
         _items = items;
@@ -42,6 +51,21 @@
     }
     _tabbarItems = temp;
 }
+
+
+
+- (void)updateTabbarItemFrame {
+    CGFloat w            = self.st_w / _items.count;
+    CGFloat h            = STTabbarContentHeight;
+    for (STTabbarItem * tabbarItem in _tabbarItems) {
+        NSInteger i   = [_tabbarItems indexOfObject:tabbarItem];
+        CGFloat x                = i * w;
+        CGFloat y                = 0;
+        tabbarItem.frame         = (CGRect){x, y, w, h};
+    }
+}
+
+
 - (void)setSelectIndex:(NSInteger)selectIndex {
     NSArray *items = self->_tabbarItems;
     for (STTabbarItem *item in items) {
