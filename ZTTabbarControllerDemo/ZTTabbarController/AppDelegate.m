@@ -36,8 +36,8 @@
 }
 
 - (NSArray <ZTTabbarItemModel *> *)models {
-    ZTTabbarItemModel * model1 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"1_select" andSelectImageName:[self gifArray] andTitle:@"测试标题1"];
-    ZTTabbarItemModel * model2 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"2_normal" andSelectImageName:@"2_select" andTitle:@"测试标题2"];
+    ZTTabbarItemModel * model1 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"1_normal" andSelectImageName:@"1_select" andTitle:@"测试标题1"];
+    ZTTabbarItemModel * model2 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"2_normal" andSelectImageName:[self gifArray] andTitle:@"测试标题2"];
     ZTTabbarItemModel * model3 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"3_normal" andSelectImageName:@"3_select" andTitle:@"测试标题3"];
     ZTTabbarItemModel * model4 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"4_normal" andSelectImageName:@"4_select" andTitle:@"测试标题4"];
     return @[model1,model2,model3,model4];
