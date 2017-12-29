@@ -11,5 +11,5 @@
 @property (weak, nonatomic) NSArray<ZTTabbarItemModel *> *items;
 @property (weak, nonatomic) NSArray *itemAttributes;
 @property (assign, nonatomic) NSInteger selectIndex;
-@property (strong, nonatomic) UIColor * bgColor;
+@property (strong, nonatomic) UIColor *bgColor;
 @end

@@ -9,16 +9,22 @@
 #import "UIView+ZTTabbar.h"
 #import "ZTTabbarConstant.h"
 @implementation ZTTabbarItemModel
-- (instancetype)initWithNormalImageName:(NSString *)normalImageName andSelectImageName:(NSString *)selectImageName andTitle:(NSString *)title {
+- (instancetype)initWithNormalImageName:(id)imageName andSelectImageName:(id)selectImageName andTitle:(NSString *)title {
     self = [super init];
     if (self) {
-        self.normalImageName = normalImageName;
+        self.imageName       = imageName;
         self.selectImageName = selectImageName;
         self.title           = title;
     }
     return self;
 }
 - (BOOL)isModelValidate {
-    return !STR_IS_EMPTY(self.normalImageName);
+    if ([self.imageName isKindOfClass:[NSString class]]) {
+        return !ZTJudge_STR_EMPTY(((NSString *) self.imageName));
+    } else if ([self.imageName isKindOfClass:[NSArray class]]) {
+        return ((NSArray *) self.imageName).count;
+    } else {
+        return NO;
+    }
 }
 @end

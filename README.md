@@ -9,6 +9,10 @@
 * Can be used inside UINavigationController
 
 
+##TODO
+* Support the dynamic and static images of the selected and normal state
+* Irregular Item
+
 ## Installation
 
 ### CocoaPods

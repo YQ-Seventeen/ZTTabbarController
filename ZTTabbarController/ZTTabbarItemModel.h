@@ -7,9 +7,9 @@
 //
 #import <Foundation/Foundation.h>
 @interface ZTTabbarItemModel : NSObject
-- (instancetype)initWithNormalImageName:(NSString *)normalImageName andSelectImageName:(NSString *)selectImageName andTitle:(NSString *)title;
-@property (copy, nonatomic) NSString *normalImageName;
-@property (copy, nonatomic) NSString *selectImageName;
+- (instancetype)initWithNormalImageName:(id)imageName andSelectImageName:(id)selectImageName andTitle:(NSString *)title;
+@property (copy, nonatomic) id imageName;
+@property (copy, nonatomic) id selectImageName;
 @property (copy, nonatomic) NSString *title;
 - (BOOL)isModelValidate;
 @end

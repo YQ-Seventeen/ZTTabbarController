@@ -13,6 +13,7 @@
 @interface ZTTabbarItem : UIView
 @property (weak, nonatomic) ZTTabbarItemModel *dataModel;
 @property (weak, nonatomic) ZTTabbarItemAttribute *attribute;
-@property (assign, nonatomic) BOOL select;
+@property (strong, nonatomic) NSNumber * select;
+@property (assign,nonatomic) NSInteger  index;
 @end
 

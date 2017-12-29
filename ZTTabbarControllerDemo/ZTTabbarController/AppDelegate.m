@@ -25,7 +25,7 @@
     self.window = mainWindow;
     
     ZTTabbarItemAttribute * attribute = [ZTTabbarItemAttribute defaultAttribute];
-    attribute.itemImgSize = CGSizeMake(25, 25);
+    attribute.itemImgSize = CGSizeMake(35, 35);
     ZTTabbarController * tabbarController  = [ZTTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;
@@ -36,11 +36,18 @@
 }
 
 - (NSArray <ZTTabbarItemModel *> *)models {
-    ZTTabbarItemModel * model1 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"1_normal" andSelectImageName:@"1_select" andTitle:@"测试标题1"];
+    ZTTabbarItemModel * model1 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"1_select" andSelectImageName:[self gifArray] andTitle:@"测试标题1"];
     ZTTabbarItemModel * model2 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"2_normal" andSelectImageName:@"2_select" andTitle:@"测试标题2"];
     ZTTabbarItemModel * model3 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"3_normal" andSelectImageName:@"3_select" andTitle:@"测试标题3"];
     ZTTabbarItemModel * model4 = [[ZTTabbarItemModel alloc]initWithNormalImageName:@"4_normal" andSelectImageName:@"4_select" andTitle:@"测试标题4"];
     return @[model1,model2,model3,model4];
+}
+- (NSMutableArray *)gifArray {
+    NSMutableArray * gifArr = [NSMutableArray new];
+    for (NSInteger i =1; i<=60; ++i) {
+        [gifArr addObject:[NSString stringWithFormat:@"dropdown_anim__000%ld",i]];
+    }
+    return gifArr;
 }
 
 - (NSArray <UIViewController *>*)viewControllers {

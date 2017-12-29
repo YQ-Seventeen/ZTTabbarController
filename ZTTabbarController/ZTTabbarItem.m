@@ -11,6 +11,50 @@
 #import "ZTTabbarItemAttribute.h"
 #import "ZTTabbarConstant.h"
 static float imageTitleVSpace = 5.0f;
+
+
+@interface UIView (Animation)
+- (void)zt_addAnimations:(NSArray *)animations forKey:(NSString *)key;
+- (void)zt_removeAnimationsWithKey:(NSString *)key;
+- (BOOL)zt_isAnimating;
+@end
+
+@implementation UIView(Animation)
+static float keyTimes = 1.0/24;
+- (void)zt_addAnimations:(NSArray *)animations forKey:(NSString *)key {
+    
+    NSMutableArray * imagesRefArray = [NSMutableArray new];
+    NSMutableArray * keyTimesArray       = [NSMutableArray new];
+    for (UIImage * image in animations) {
+        [imagesRefArray addObject:(__bridge id)[image CGImage]];
+        [keyTimesArray addObject:[NSNumber numberWithFloat:keyTimes]];
+    }
+    
+    CAKeyframeAnimation * keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
+    keyFrameAnimation.calculationMode = kCAAnimationDiscrete;
+
+    keyFrameAnimation.repeatCount = CGFLOAT_MAX;
+    keyFrameAnimation.duration = keyTimes*animations.count;
+    keyFrameAnimation.values = imagesRefArray;
+    CALayer * layer = [CALayer layer];
+    layer.frame = self.bounds;
+    [layer addAnimation:keyFrameAnimation forKey:key];
+    [self.layer addSublayer:layer];
+}
+
+- (void)zt_removeAnimationsWithKey:(NSString *)key {
+    CALayer * animationLayer = [[self.layer sublayers]lastObject];
+    [animationLayer removeAnimationForKey:key];
+    [animationLayer removeFromSuperlayer];
+}
+
+- (BOOL)zt_isAnimating {
+    CALayer * animationLayer = [[self.layer sublayers]lastObject];
+    return [animationLayer.animationKeys count];
+}
+@end
+
+
 CGSize zt_calcuteTitleAdjustSize(ZTTabbarItemModel *model, UIFont *titleFont, UIView *v) {
     NSDictionary *dic  = @{NSFontAttributeName : titleFont};
     float adjustMargin = 5.0f;
@@ -62,6 +106,9 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
     UIImageView *_itemImageView;
     UILabel *_itemTitleLabel;
     UIView *_itemBadgeView;
+    NSMutableArray<UIImage *> * _normalImageArray;
+    NSMutableArray<UIImage *> * _selectImageArray;
+    NSString  *   _animationKey;
 }
 - (instancetype)init {
     self = [super init];
@@ -74,6 +121,13 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
     _itemImageView.frame  = zt_calculateImageAdjustPosition(_itemImageView.image, _dataModel, self, _attribute);
     _itemTitleLabel.frame = zt_calcuteTitleAdjustPosition(_dataModel, self, _attribute);
 }
+
+
+- (void)didMoveToSuperview {
+    _itemImageView.frame  = zt_calculateImageAdjustPosition(_itemImageView.image, _dataModel, self, _attribute);
+    _itemTitleLabel.frame = zt_calcuteTitleAdjustPosition(_dataModel, self, _attribute);
+}
+
 - (void)setDataModel:(ZTTabbarItemModel *)dataModel {
     if (_dataModel != dataModel && [dataModel isModelValidate]) {
         _dataModel = dataModel;
@@ -83,51 +137,113 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
 - (void)setAttribute:(ZTTabbarItemAttribute *)attribute {
     _attribute = attribute;
 }
+
+- (void)setIndex:(NSInteger)index {
+    _index = index;
+    _animationKey = [NSString stringWithFormat:@"ZTTabbar%ld",index];
+}
+
+- (void)setupImageObjectArray {
+    id imageName = self.dataModel.imageName;
+    NSMutableArray<UIImage *> * imageArrays = [NSMutableArray arrayWithCapacity:1];
+    if ([imageName isKindOfClass:[NSString class]]) {
+        UIImage * image = [UIImage imageNamed:imageName];
+        [imageArrays addObject:image];
+    }
+    else if([imageName isKindOfClass:[NSArray class]]){
+        [(NSArray *)imageName enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [imageArrays addObject:[UIImage imageNamed:obj]];
+        }];
+    }
+    _normalImageArray = imageArrays;
+    
+    
+    id selectImageName = self.dataModel.selectImageName;
+    if (selectImageName == nil) {
+        _selectImageArray = _normalImageArray;
+    }
+    else{
+        NSMutableArray<UIImage *> * selectImageArrays = [NSMutableArray arrayWithCapacity:1];
+        if ([selectImageName isKindOfClass:[NSString class]]) {
+            UIImage * image = [UIImage imageNamed:selectImageName];
+            [selectImageArrays addObject:image];
+        }
+        else if([selectImageName isKindOfClass:[NSArray class]]){
+            [(NSArray *)selectImageName enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [selectImageArrays addObject:[UIImage imageNamed:obj]];
+            }];
+        }
+        _selectImageArray = selectImageArrays;
+    }
+}
+
 - (void)setupItem {
-    UIImage *itemNormalImage = [UIImage imageNamed:self.dataModel.normalImageName];
-    if (itemNormalImage == nil) NSAssert(NO, @"error");
+    
+    if (self.attribute.itemBgColor) {
+        self.backgroundColor = self.attribute.itemBgColor;
+    }
+    
+    [self setupImageObjectArray];
+    
     _itemImageView  = [[UIImageView alloc] init];
-    [_itemImageView setImage:itemNormalImage];
     [self addSubview:_itemImageView];
     
     NSString *title = self.dataModel.title;
     if (title && title.length > 0) {
         _itemTitleLabel      = [[UILabel alloc] init];
         _itemTitleLabel.font = self.attribute.itemTitleFont;
-        _itemTitleLabel.text = title;
         [self addSubview:_itemTitleLabel];
     }
     
-    if (self.attribute.itemBgColor) {
-        self.backgroundColor = self.attribute.itemBgColor;
+    if (_normalImageArray.count>1 || _selectImageArray.count>1) {
+        _itemImageView.animationRepeatCount = 0;
+    }
+    
+}
+
+- (void)setupItemImage {
+    if (_itemImageView.zt_isAnimating) {
+        [_itemImageView zt_removeAnimationsWithKey:_animationKey];
+    }
+    if (_itemImageView.image){
+        _itemImageView.image = nil;
+    }
+    NSArray * images = _select.boolValue?_selectImageArray:_normalImageArray;
+    if (images.count > 1) {
+        [_itemImageView zt_addAnimations:images forKey:_animationKey];
+    }
+    else {
+        if (_itemImageView.image != images.firstObject) {
+            _itemImageView.image = images.firstObject;
+        }
     }
 }
 
 - (void)addTapGesture {
-    ZTAvoidPerformSelectorWarning({
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTabbarItem:)];
-        [self addGestureRecognizer:tap];
-        self.userInteractionEnabled = YES;
-    })
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTabbarItem:)];
+    [self addGestureRecognizer:tap];
+    self.userInteractionEnabled = YES;
 }
 - (void)clickTabbarItem:(UIGestureRecognizer *)ges {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ZTTabbarItemDidClickNotification" object:@(ges.view.tag)];
 }
-- (void)setSelect:(BOOL)select {
-    if (_select == select) return;
-    if (select) {
+- (void)setSelect:(NSNumber *)select {
+    if (_select && _select == select) return;
+    if (select.boolValue) {
         self->_itemTitleLabel.textColor = self.attribute.itemTitleSelectColor;
-        self->_itemImageView.image      = [UIImage imageNamed:self.dataModel.selectImageName];
         if (self.attribute.itemBgSelectColor) {
             self.backgroundColor            = self.attribute.itemBgSelectColor;
         }
     } else {
         self->_itemTitleLabel.textColor = self.attribute.itemTitleColor;
-        self->_itemImageView.image      = [UIImage imageNamed:self.dataModel.normalImageName];
         if (self.attribute.itemBgColor) {
             self.backgroundColor            = self.attribute.itemBgColor;
         }
     }
+    self->_itemTitleLabel.text = self.dataModel.title;
     _select = select;
+    [self setupItemImage];
 }
 @end
+
+

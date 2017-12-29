@@ -62,37 +62,29 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 - (void)viewWillLayoutSubviews {
     _tabbarHiddenY  = self.view.zt_h;
     _tabbarDisplayY = self.view.zt_h - _tabbar.zt_h;
     [self updateContentFrame];
     [self updateTabbar];
 }
-
-#pragma mark  -- Horizontal vertical screen
+#pragma mark-- Horizontal vertical screen
 - (BOOL)shouldAutorotate {
-    return [[self displayViewController]shouldAutorotate];
+    return [[self displayViewController] shouldAutorotate];
 }
-
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-
-    return [[self displayViewController]supportedInterfaceOrientations];
+    return [[self displayViewController] supportedInterfaceOrientations];
 }
-
-
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return [[self displayViewController]preferredInterfaceOrientationForPresentation];
+    return [[self displayViewController] preferredInterfaceOrientationForPresentation];
 }
-
 - (UIViewController *)displayViewController {
-    UIViewController * displayVC = [self.childViewControllers objectAtIndex:self.selectIndex];
+    UIViewController *displayVC = [self.childViewControllers objectAtIndex:self.selectIndex];
     if ([displayVC isKindOfClass:[UINavigationController class]]) {
-        displayVC = [((UINavigationController *)displayVC) topViewController];
+        displayVC = [((UINavigationController *) displayVC) topViewController];
     }
     return displayVC;
 }
-
 #pragma mark-- setup
 - (void)initialization {
     self.view.backgroundColor  = [UIColor whiteColor];
@@ -112,8 +104,6 @@
         }
     }
     [self makeChildRelateRootTabbarController];
-    
-    
     //check items title if not exist then use childViewController's title if it exists
     [self checkItemsTitle];
 }
@@ -126,20 +116,18 @@
         }
     }];
 }
-
 - (void)checkItemsTitle {
-    for (ZTTabbarItemModel * itemModel in _tabbar.items) {
-        NSInteger index = [_tabbar.items indexOfObject:itemModel];
-        UIViewController * vc = self.childViewControllers[index];
+    for (ZTTabbarItemModel *itemModel in _tabbar.items) {
+        NSInteger index      = [_tabbar.items indexOfObject:itemModel];
+        UIViewController *vc = self.childViewControllers[index];
         if ([vc isKindOfClass:[UINavigationController class]]) {
-            vc = [(UINavigationController *)vc topViewController];
+            vc = [(UINavigationController *) vc topViewController];
         }
-        if (STR_IS_EMPTY(itemModel.title) && !STR_IS_EMPTY(vc.title)) {
+        if (ZTJudge_STR_EMPTY(itemModel.title) && !ZTJudge_STR_EMPTY(vc.title)) {
             itemModel.title = vc.title;
         }
     }
 }
-
 - (void)setupTabbar {
     if (!_items || !_items.count || _items.count > MAX_ITEM_COUNT) {
         NSAssert(NO, @"error");
@@ -150,14 +138,12 @@
     NSAssert([self checkAttribute], @"attribute error");
     [self generateAttributes];
     [self createTabbar];
-    self.selectIndex      = 0;
+    self.selectIndex = 0;
 }
-
 - (void)createTabbar {
     if (_tabbar) {
         [self updateTabbar];
-    }
-    else{
+    } else {
         float tabbarW    = self.view.zt_w;
         float tabbarH    = ZTTabbarDefaultHeight;
         float tabbarX    = 0;
@@ -169,19 +155,17 @@
         tabbar.items          = _items;
     }
 }
-
 - (void)updateTabbar {
     if (!_tabbar) {
         [self createTabbar];
         return;
     }
-    float tabbarW    = self.view.zt_w;
-    float tabbarH    = ZTTabbarDefaultHeight;
-    float tabbarX    = 0;
-    float tabbarY    = self.view.zt_maxY - tabbarH;
-    _tabbar.frame = (CGRect){tabbarX,tabbarY,tabbarW,tabbarH};
+    float tabbarW = self.view.zt_w;
+    float tabbarH = ZTTabbarDefaultHeight;
+    float tabbarX = 0;
+    float tabbarY = self.view.zt_maxY - tabbarH;
+    _tabbar.frame = (CGRect){tabbarX, tabbarY, tabbarW, tabbarH};
 }
-
 - (BOOL)checkAttribute {
     if (self.itemsAttributes && self.itemsAttributes.count < _items.count) {
         return NO;
@@ -200,10 +184,9 @@
         self.itemsAttributes = temp;
     }
 }
-
 - (void)updateContentFrame {
-    UIViewController * displayVC = [self displayViewController];
-    if(displayVC.navigationController){
+    UIViewController *displayVC = [self displayViewController];
+    if (displayVC.navigationController) {
         displayVC.navigationController.view.frame = CGRectMake(0, 0, self.view.zt_w, self.view.zt_h);
     }
     displayVC.view.frame = CGRectMake(0, 0, self.view.zt_w, self.view.zt_h);
@@ -228,14 +211,12 @@
     }
 }
 #pragma mark-- public Methods
-
 - (void)setBackgroundViewColor:(UIColor *)backgroundViewColor {
     if (backgroundViewColor && _backgroundViewColor != backgroundViewColor) {
-        _backgroundViewColor = backgroundViewColor;
+        _backgroundViewColor    = backgroundViewColor;
         _tabbar.backgroundColor = backgroundViewColor;
     }
 }
-
 - (void)setItems:(NSArray<__kindof ZTTabbarItemModel *> *)items {
     if (_items != items) {
         _items = items;
@@ -253,7 +234,7 @@
     [self setup_afterSetChildVC];
 }
 - (void)setSelectIndex:(NSInteger)selectIndex {
-    if(_selectIndex  == selectIndex && _topViewController) {
+    if (_selectIndex == selectIndex && _topViewController) {
         return;
     }
     _selectIndex = selectIndex;
@@ -272,7 +253,6 @@
     }
     _tabbar.selectIndex = selectIndex;
 }
-
 - (void)setTabbarHidden:(BOOL)hidden animated:(BOOL)animated {
     float afterHeight = _tabbarDisplayY;
     if (hidden) {
@@ -307,10 +287,7 @@
     }
 }
 @end
-
-
 @implementation UIViewController (ZTTabbarController)
-
 - (void)setZt_tabbar:(ZTTabbarController *)zt_tabbar {
     if (zt_tabbar) {
         SEL storeKey = @selector(zt_tabbar);
@@ -318,18 +295,15 @@
     }
 }
 - (ZTTabbarController *)zt_tabbar {
-    ZTTabbarController * tabbarController = objc_getAssociatedObject(self, _cmd);
+    ZTTabbarController *tabbarController = objc_getAssociatedObject(self, _cmd);
     if (tabbarController) {
         return tabbarController;
-    }
-    else{
+    } else {
         if (self.navigationController) {
             return self.navigationController.zt_tabbar;
-        }
-        else if(self.presentingViewController){
+        } else if (self.presentingViewController) {
             return self.presentingViewController.zt_tabbar;
-        }
-        else{
+        } else {
             return nil;
         }
     }

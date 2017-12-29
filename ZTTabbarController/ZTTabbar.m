@@ -46,6 +46,7 @@
         tabbarItem.attribute     = self.itemAttributes[i];
         tabbarItem.dataModel     = self.items[i];
         tabbarItem.tag           = i;
+        tabbarItem.index         = i;
         [self insertSubview:tabbarItem atIndex:0];
         [temp addObject:tabbarItem];
     }
@@ -71,9 +72,9 @@
     for (ZTTabbarItem *item in items) {
         NSInteger index = [items indexOfObject:item];
         if (index == selectIndex) {
-            item.select = YES;
+            item.select = @YES;
         } else {
-            item.select = NO;
+            item.select = @NO;
         }
     }
 }
