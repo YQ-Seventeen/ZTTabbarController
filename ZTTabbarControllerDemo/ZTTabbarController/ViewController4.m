@@ -41,6 +41,13 @@
     [super viewWillAppear:animated];
     [self.zt_tabbar setTabbarHidden:NO animated:YES];
 }
+
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return  UIStatusBarStyleLightContent;
+}
+
 /*
 #pragma mark - Navigation
 

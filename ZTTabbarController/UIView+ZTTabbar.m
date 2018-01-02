@@ -1,6 +1,6 @@
 //
 //  UIView+ZTTabbar.m
-//  YQRefresh
+//  ZTTabbarController
 //
 //  Created by yq on 2017/12/14.
 //  Copyright © 2017年 Suning. All rights reserved.

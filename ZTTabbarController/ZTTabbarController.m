@@ -78,6 +78,20 @@
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     return [[self displayViewController] preferredInterfaceOrientationForPresentation];
 }
+
+- (BOOL)prefersStatusBarHidden {
+    
+    return [[self displayViewController]prefersStatusBarHidden];
+}
+
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
+    return [[self displayViewController]preferredStatusBarUpdateAnimation];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return [[self displayViewController] preferredStatusBarStyle];
+}
+
 - (UIViewController *)displayViewController {
     UIViewController *displayVC = [self.childViewControllers objectAtIndex:self.selectIndex];
     if ([displayVC isKindOfClass:[UINavigationController class]]) {
@@ -252,6 +266,8 @@
         [totalTopViewController didMoveToParentViewController:self];
     }
     _tabbar.selectIndex = selectIndex;
+    //call this methods to change the statusbar appearce if need
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 - (void)setTabbarHidden:(BOOL)hidden animated:(BOOL)animated {
     float afterHeight = _tabbarDisplayY;
@@ -289,10 +305,8 @@
 @end
 @implementation UIViewController (ZTTabbarController)
 - (void)setZt_tabbar:(ZTTabbarController *)zt_tabbar {
-    if (zt_tabbar) {
-        SEL storeKey = @selector(zt_tabbar);
-        objc_setAssociatedObject(self, storeKey, zt_tabbar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
+    SEL storeKey = @selector(zt_tabbar);
+    objc_setAssociatedObject(self, storeKey, zt_tabbar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (ZTTabbarController *)zt_tabbar {
     ZTTabbarController *tabbarController = objc_getAssociatedObject(self, _cmd);
@@ -307,13 +321,5 @@
             return nil;
         }
     }
-}
-- (void)setHidesTabbarWhenPushed:(BOOL)hidesTabbarWhenPushed {
-    SEL storeKey = @selector(hidesTabbarWhenPushed);
-    objc_setAssociatedObject(self, storeKey, @(hidesTabbarWhenPushed), OBJC_ASSOCIATION_ASSIGN);
-}
-- (BOOL)hidesTabbarWhenPushed {
-    NSNumber *hidesTabbarWhenPushed = objc_getAssociatedObject(self, _cmd);
-    return hidesTabbarWhenPushed.boolValue;
 }
 @end

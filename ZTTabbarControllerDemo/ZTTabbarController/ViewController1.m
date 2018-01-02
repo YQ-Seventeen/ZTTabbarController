@@ -36,6 +36,18 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+//    NSLog(@"%@ %s",NSStringFromClass([self class]),(__bridge char *)_cmd);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (BOOL)shouldAutorotate {
     return YES;
 }

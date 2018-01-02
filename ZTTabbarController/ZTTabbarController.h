@@ -68,6 +68,5 @@
 
 @interface UIViewController (ZTTabbarController)
 @property (strong, nonatomic) ZTTabbarController *zt_tabbar;
-@property (assign, nonatomic) BOOL hidesTabbarWhenPushed;
 @end
 
