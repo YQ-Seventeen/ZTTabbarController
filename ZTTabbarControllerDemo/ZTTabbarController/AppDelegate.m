@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZTTabbarController.h"
+#import "CustomNavigationController.h"
 #import "ViewController1.h"
 #import "ViewController2.h"
 #import "ViewController3.h"
@@ -25,8 +26,8 @@
     self.window = mainWindow;
     
     ZTTabbarItemAttribute * attribute = [ZTTabbarItemAttribute defaultAttribute];
-    attribute.itemImgSize = CGSizeMake(35, 35);
-    ZTTabbarController * tabbarController  = [ZTTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
+    attribute.itemImgSize = CGSizeMake(30, 30);
+    ZTTabbarController * tabbarController  = [ZTTabbarController tabbarWithItemModels:[self models] itemAppearce:attribute];
     [tabbarController setChildViewControllers:[self viewControllers]];
     tabbarController.delegate = self;
     tabbarController.rectEdge = UIRectEdgeNone;
@@ -56,7 +57,7 @@
 
 
 - (UINavigationController *)navcWithVC:(UIViewController *)vc {
-    return [[UINavigationController alloc]initWithRootViewController:vc];
+    return [[CustomNavigationController alloc]initWithRootViewController:vc];
 }
 
 

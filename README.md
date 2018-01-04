@@ -7,10 +7,10 @@
 * Supports iphone X 
 * Supports landscape and portrait orientations
 * Can be used inside UINavigationController
-
-
-##TODO
 * Support the dynamic and static images of the selected and normal state
+
+
+###TODO
 * Irregular Item
 
 ## Installation
@@ -31,7 +31,7 @@ The initialization is simple,just insert code below
 
 ```objective-c
 ZTTabbarItemAttribute * attribute = [ZTTabbarItemAttribute defaultAttribute];
-ZTTabbarController * tabbarController  = [ZTTabbarController tabbarWithItemModels:[self models] ItemAppearce:attribute];
+ZTTabbarController * tabbarController  = [ZTTabbarController tabbarWithItemModels:[self models] itemAppearce:attribute];
 [tabbarController setChildViewControllers:[self viewControllers]];
 tabbarController.delegate = self;
 tabbarController.rectEdge = UIRectEdgeNone;

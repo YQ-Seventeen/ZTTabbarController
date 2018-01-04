@@ -21,8 +21,10 @@
     [super viewDidLoad];
     self.title = @"我是tab4";
     self.view.backgroundColor = [UIColor purpleColor];
-    self.hidesTabbarWhenPushed = YES;
     // Do any additional setup after loading the view.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.zt_tabbar showBadgeNumber:0 atTabbarIndex:3];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

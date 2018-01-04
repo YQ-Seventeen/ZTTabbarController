@@ -79,3 +79,13 @@
     }
 }
 @end
+
+
+@implementation ZTTabbar (BadgeView)
+- (void)showBadgeNumber:(NSInteger)badgeNumber atTabbarIndex:(NSInteger)tabbarIndex {
+    [self->_tabbarItems[tabbarIndex] showBadgeNumber:badgeNumber];
+}
+- (void)hiddenBadgeViewAtTabbarIndex:(NSInteger)tabbarIndex {
+    [self->_tabbarItems[tabbarIndex] hiddenBadgeNumber];
+}
+@end

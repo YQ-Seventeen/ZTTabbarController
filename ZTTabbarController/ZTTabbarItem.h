@@ -14,6 +14,10 @@
 @property (weak, nonatomic) ZTTabbarItemModel *dataModel;
 @property (weak, nonatomic) ZTTabbarItemAttribute *attribute;
 @property (strong, nonatomic) NSNumber * select;
-@property (assign,nonatomic) NSInteger  index;
+@property (assign,nonatomic) NSInteger   index;
 @end
 
+@interface ZTTabbarItem(BadgeView)
+- (void)showBadgeNumber:(NSInteger)badgeNumber;
+- (void)hiddenBadgeNumber;
+@end

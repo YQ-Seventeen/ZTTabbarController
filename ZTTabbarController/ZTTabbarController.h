@@ -50,7 +50,7 @@
  @param appearceAttribute appearceAttribute
  @return a valid tabbarController instance
  */
-+ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items ItemAppearce:(ZTTabbarItemAttribute *)appearceAttribute;
++ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items itemAppearce:(ZTTabbarItemAttribute *)appearceAttribute;
 /**
  init tabbar with items and current appearces array
  
@@ -63,6 +63,15 @@
 - (void)setTabbarHidden:(BOOL)hidden animated:(BOOL)animated;
 
 - (void)setTabbarHidden:(BOOL)hidden;
+
+@end
+
+@interface ZTTabbarController (BadgeView)
+
+- (void)showBadgeNumber:(NSInteger)badgeNumber atTabbarIndex:(NSInteger)tabbarIndex;
+
+- (void)hiddenBadgeViewAtTabbarIndex:(NSInteger)tabbarIndex;
+
 @end
 
 

@@ -13,3 +13,9 @@
 @property (assign, nonatomic) NSInteger selectIndex;
 @property (strong, nonatomic) UIColor *bgColor;
 @end
+
+
+@interface ZTTabbar (BadgeView)
+- (void)showBadgeNumber:(NSInteger)badgeNumber atTabbarIndex:(NSInteger)tabbarIndex;
+- (void)hiddenBadgeViewAtTabbarIndex:(NSInteger)tabbarIndex;
+@end

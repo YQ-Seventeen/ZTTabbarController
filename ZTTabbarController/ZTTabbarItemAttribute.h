@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIFont  *itemTitleFont;
 @property (strong, nonatomic) UIColor *itemBgColor;
 @property (strong, nonatomic) UIColor *itemBgSelectColor;
+@property (strong, nonatomic) UIColor *itemBadgeColor;
 @property (assign, nonatomic) CGSize   itemImgSize;
 + (instancetype)defaultAttribute;
 @end

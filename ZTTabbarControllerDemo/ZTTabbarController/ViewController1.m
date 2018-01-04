@@ -20,15 +20,6 @@
     self.view.backgroundColor = [UIColor redColor];
     
     
-    UIView * blueView = [[UIView alloc]init];
-    blueView.frame = CGRectMake(0, 64, 20, 30);
-    blueView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:blueView];
-    
-    UIView * yellowView = [[UIView alloc]init];
-    yellowView.frame = CGRectMake(0, self.view.frame.size.height - 49- 50 - 64, 100, 50);
-    yellowView.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:yellowView];
     // Do any additional setup after loading the view.
     
     self.navigationController.navigationBarHidden = YES;

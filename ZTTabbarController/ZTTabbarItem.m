@@ -10,7 +10,7 @@
 #import "UIView+ZTTabbar.h"
 #import "ZTTabbarItemAttribute.h"
 #import "ZTTabbarConstant.h"
-static float imageTitleVSpace = 5.0f;
+static float imageTitleVSpace = 2.0f;
 
 
 @interface UIView (Animation)
@@ -55,6 +55,63 @@ static float keyTimes = 1.0/24;
 @end
 
 
+@interface ZTTabbarItemBadgeView : UIView
+@property (assign,nonatomic) NSInteger badgeNumber;
+@property (strong,nonatomic) UILabel  *badgeNumberLabel;
+- (instancetype)initWithBadgeNumber:(NSInteger)badgeNumber;
+- (void)updateBadgeNumber:(NSInteger)badgeNumber;
+@end
+
+
+@implementation ZTTabbarItemBadgeView
+- (instancetype)initWithBadgeNumber:(NSInteger)badgeNumber {
+    self = [super init];
+    if(self){
+        self.badgeNumber = badgeNumber;
+        [self addSubview:self.badgeNumberLabel];
+        [self updateBadgeNumber:badgeNumber];
+        self.backgroundColor = [UIColor redColor];
+        
+    }
+    return self;
+}
+
+- (void)updateBadgeNumber:(NSInteger)badgeNumber {
+    if (self.hidden) {
+        self.hidden = !self.hidden;
+    }
+    if (!badgeNumber || ABS(badgeNumber) != badgeNumber) {
+        self.badgeNumberLabel.hidden = YES;
+    }
+    else{
+        self.badgeNumberLabel.hidden = NO;
+    }
+    NSString *badgeString = [NSString stringWithFormat:@"%ld",badgeNumber];
+    [self.badgeNumberLabel setText:badgeString];
+}
+
+
+- (void)layoutSubviews {
+    self.badgeNumberLabel.frame = self.bounds;
+    float height = self.zt_h;
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = height/2;
+}
+
+- (UILabel *)badgeNumberLabel {
+    if (!_badgeNumberLabel) {
+        _badgeNumberLabel = [UILabel new];
+        _badgeNumberLabel.textColor = [UIColor whiteColor];
+        _badgeNumberLabel.textAlignment = NSTextAlignmentCenter;
+        _badgeNumberLabel.font = [UIFont systemFontOfSize:12];
+    }
+    return _badgeNumberLabel;
+}
+
+
+@end
+
+
 CGSize zt_calcuteTitleAdjustSize(ZTTabbarItemModel *model, UIFont *titleFont, UIView *v) {
     NSDictionary *dic  = @{NSFontAttributeName : titleFont};
     float adjustMargin = 5.0f;
@@ -77,8 +134,8 @@ CGSize zt_calculateImageAdjustSize(UIImage *zt_image, ZTTabbarItemModel *model,Z
         maxWidth  = ZTTabbarImageDefaultWidthWithTitle;
         maxHeight = ZTTabbarImageDefaultHeightWithTitle;
     } else {
-        maxWidth  = ZTTabbarImageDefaultWidthWithoutTitle;
-        maxHeight = ZTTabbarImageDefaultHeightWithoutTitle;
+        maxWidth  = ZTTabbarImageDefaultWidth;
+        maxHeight = ZTTabbarImageDefaultHeight;
     }
     imageSize = CGSizeMake(MIN(maxWidth, imageSize.width),MIN(maxHeight, imageSize.height));
     return imageSize;
@@ -99,7 +156,7 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
     CGSize titleAdjustSize = zt_calcuteTitleAdjustSize(model, attribute.itemTitleFont, v);
     float x, y = 0;
     x = (v.zt_w - titleAdjustSize.width) / 2;
-    y = (v.zt_h - titleAdjustSize.height - 2);
+    y = (v.zt_h - titleAdjustSize.height - 3);
     return (CGRect){CGPointMake(x, y), titleAdjustSize};
 }
 @implementation ZTTabbarItem {
@@ -109,6 +166,7 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
     NSMutableArray<UIImage *> * _normalImageArray;
     NSMutableArray<UIImage *> * _selectImageArray;
     NSString  *   _animationKey;
+    ZTTabbarItemBadgeView * _badgeView;
 }
 - (instancetype)init {
     self = [super init];
@@ -243,6 +301,36 @@ CGRect zt_calcuteTitleAdjustPosition(ZTTabbarItemModel *model, UIView *v, ZTTabb
     self->_itemTitleLabel.text = self.dataModel.title;
     _select = select;
     [self setupItemImage];
+}
+@end
+
+
+@implementation ZTTabbarItem(BadgeView)
+- (void)showBadgeNumber:(NSInteger)badgeNumber{
+    if (self->_badgeView == nil) {
+        self->_badgeView = [[ZTTabbarItemBadgeView alloc]initWithBadgeNumber:badgeNumber];
+        self->_badgeView.backgroundColor = self.attribute.itemBadgeColor;
+        [self insertSubview:self->_badgeView aboveSubview:self->_itemImageView];
+    }
+    else {
+        [self->_badgeView updateBadgeNumber:badgeNumber];
+    }
+
+    CGSize badgeSize = [[NSString stringWithFormat:@"%ld",badgeNumber] sizeWithAttributes:@{NSFontAttributeName:self->_badgeView.badgeNumberLabel.font}];
+    CGFloat xOffset = 5;
+    CGFloat yOffset = 1;
+    if (badgeNumber>0&&badgeNumber<100) {
+        badgeSize = CGSizeMake(MAX(badgeSize.width, badgeSize.height), MAX(badgeSize.width, badgeSize.height));
+    }
+    else if(badgeNumber<=0){
+        badgeSize = CGSizeMake(5, 5);
+    }
+    CGFloat badgeX  = self->_itemImageView.zt_maxX - xOffset;
+    CGFloat badgeY  = self->_itemImageView.zt_y - yOffset;
+    self->_badgeView.frame = CGRectMake(badgeX, badgeY, badgeSize.width+5, badgeSize.height+5);
+}
+- (void)hiddenBadgeNumber {
+    self->_badgeView.hidden = YES;
 }
 @end
 

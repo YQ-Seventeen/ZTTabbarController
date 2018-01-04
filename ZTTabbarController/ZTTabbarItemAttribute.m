@@ -12,6 +12,7 @@
     attribute.itemTitleColor             = [UIColor darkTextColor];
     attribute.itemTitleSelectColor       = [UIColor blueColor];
     attribute.itemTitleFont              = [UIFont systemFontOfSize:10];
+    attribute.itemBadgeColor             = [UIColor redColor];
     attribute.itemImgSize                = CGSizeMake(30, 30);
     return attribute;
 }

@@ -18,6 +18,7 @@
 		A86BBEB01FF48816007357A6 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A86BBEA41FF48816007357A6 /* ViewController2.m */; };
 		A86BBEB11FF48816007357A6 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = A86BBEA61FF48816007357A6 /* ViewController3.m */; };
 		A86BBEB21FF48816007357A6 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = A86BBEA81FF48816007357A6 /* ViewController4.m */; };
+		A89FC26A1FFE22E700AEA7F4 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A89FC2691FFE22E700AEA7F4 /* CustomNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		A86BBEA61FF48816007357A6 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
 		A86BBEA71FF48816007357A6 /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
 		A86BBEA81FF48816007357A6 /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		A89FC2681FFE22E700AEA7F4 /* CustomNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		A89FC2691FFE22E700AEA7F4 /* CustomNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		F052EF1163407F22ADA3AF26 /* libPods-ZTTabbarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZTTabbarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +112,8 @@
 				A86BBE9E1FF48816007357A6 /* main.m */,
 				A86BBE9F1FF48816007357A6 /* ViewController.h */,
 				A86BBEA01FF48816007357A6 /* ViewController.m */,
+				A89FC2681FFE22E700AEA7F4 /* CustomNavigationController.h */,
+				A89FC2691FFE22E700AEA7F4 /* CustomNavigationController.m */,
 				A86BBEA11FF48816007357A6 /* ViewController1.h */,
 				A86BBEA21FF48816007357A6 /* ViewController1.m */,
 				A86BBEA31FF48816007357A6 /* ViewController2.h */,
@@ -252,6 +257,7 @@
 				A86BBEB01FF48816007357A6 /* ViewController2.m in Sources */,
 				A86BBEAD1FF48816007357A6 /* main.m in Sources */,
 				A86BBEB21FF48816007357A6 /* ViewController4.m in Sources */,
+				A89FC26A1FFE22E700AEA7F4 /* CustomNavigationController.m in Sources */,
 				A86BBEA91FF48816007357A6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

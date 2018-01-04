@@ -35,18 +35,18 @@
     }
     return self;
 }
-+ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items ItemAppearce:(ZTTabbarItemAttribute *)appearceAttribute ItemModelsAttribute:(NSArray<ZTTabbarItemAttribute *> *)attributes {
++ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items ItemAppearce:(ZTTabbarItemAttribute *)appearceAttribute itemModelsAttribute:(NSArray<ZTTabbarItemAttribute *> *)attributes {
     ZTTabbarController *tabbarController   = [[self alloc] initWithTabbarItemModels:items];
     tabbarController.itemAttributeAppearce = appearceAttribute;
     tabbarController.itemsAttributes       = attributes;
     return tabbarController;
 }
-+ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items ItemAppearce:(ZTTabbarItemAttribute *)appearceAttribute {
++ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items itemAppearce:(ZTTabbarItemAttribute *)appearceAttribute {
     ZTTabbarController *tabbarController   = [[self alloc] initWithTabbarItemModels:items];
     tabbarController.itemAttributeAppearce = appearceAttribute;
     return tabbarController;
 }
-+ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items ItemModelsAttribute:(NSArray<ZTTabbarItemAttribute *> *)attributes {
++ (instancetype)tabbarWithItemModels:(__kindof NSArray<ZTTabbarItemModel *> *)items itemModelsAttribute:(NSArray<ZTTabbarItemAttribute *> *)attributes {
     ZTTabbarController *tabbarController = [[self alloc] initWithTabbarItemModels:items];
     tabbarController.itemsAttributes     = attributes;
     return tabbarController;
@@ -293,15 +293,28 @@
     [self setTabbarHidden:hidden animated:NO];
 }
 - (void)setItemAttributeAppearce:(ZTTabbarItemAttribute *)itemAttributeAppearce {
-    if (itemAttributeAppearce) {
+    if (_itemAttributeAppearce != itemAttributeAppearce) {
         _itemAttributeAppearce = itemAttributeAppearce;
     }
 }
 - (void)setItemsAttributes:(NSArray<ZTTabbarItemAttribute *> *)itemsAttributes {
-    if (itemsAttributes) {
+    if (_itemsAttributes != itemsAttributes) {
         _itemsAttributes = itemsAttributes;
     }
 }
+@end
+
+
+@implementation ZTTabbarController (BadgeView)
+
+- (void)showBadgeNumber:(NSInteger)badgeNumber atTabbarIndex:(NSInteger)tabbarIndex {
+    [self->_tabbar showBadgeNumber:badgeNumber atTabbarIndex:tabbarIndex];
+}
+
+- (void)hiddenBadgeViewAtTabbarIndex:(NSInteger)tabbarIndex {
+    [self->_tabbar hiddenBadgeViewAtTabbarIndex:tabbarIndex];
+}
+
 @end
 @implementation UIViewController (ZTTabbarController)
 - (void)setZt_tabbar:(ZTTabbarController *)zt_tabbar {
